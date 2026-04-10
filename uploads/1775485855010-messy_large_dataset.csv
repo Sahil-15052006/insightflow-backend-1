@@ -1,0 +1,1001 @@
+id,name,age,email,signup_date,score,status,notes
+1,Ravi,twenty,,2023-07-23,81.56,unknown,duplicate?
+2,Priya,,Priya@test,2024-02-03,NaN,,bad data
+3,Karan,NaN,Karan@mail.com,2023-10-05,87.99,inactive,good
+4,Sneha,,Sneha@mail.com,2023-12-07,61.8,active,duplicate?
+5,Sneha,31,Sneha@mail.com,2023-02-04,,,ok
+6,Priya,NaN,Priya@test,2023-06-29,85.03,,
+7,Ali,,Ali@mail,2023-05-10,NaN,active,
+8, Rahul ,NaN, Rahul @mail.com,2023-02-24,NaN,,duplicate?
+9,Ravi,NaN,Ravi@mail.com,2023-10-07,NaN,active,
+10,Rahul,25,Rahul@@mail,2023-01-14,NaN,unknown,ok
+11,Sneha,NaN,Sneha@example.com,2023-05-01,66.47,unknown,duplicate?
+12,Neha,39,Neha@example.com,2023-07-30,,,
+13,Sneha,twenty,,2023-04-24,NaN,inactive,good
+14,Ravi,,Ravi@@test,2023-08-28,68.49,active,duplicate?
+15,Ravi,twenty,Ravi@test,2023-06-28,86.9,,bad data
+16,Priya,twenty,Priya@example.com,not_a_date,NaN,inactive,
+17,Jane,NaN,Jane@@test,2023-11-27,NaN,unknown,ok
+18,Priya,,Priya@@test,2023-02-07,NaN,active,duplicate?
+19,Priya,NaN,Priya@test,2023-10-30,,,
+20,Ravi,25,Ravi@mail.com,2023-11-19,82.94,inactive,good
+21,Jane,NaN,Jane@@mail,not_a_date,75.39,inactive,good
+22,Ravi,33,Ravi@test,2023-09-06,NaN,,duplicate?
+23,Sneha,twenty,Sneha@example.com,2023-02-22,83.52,active,good
+24,Neha,,Neha@example.com,2024-01-04,NaN,,good
+25,Rahul,NaN,Rahul@@test,2023-08-05,NaN,inactive,duplicate?
+26,Priya,35,Priya@example.com,2023-07-21,67.24,active,
+27,John,twenty,John@mail.com,2024-01-21,,unknown,
+28,Rahul,19,Rahul@@mail.com,2023-09-15,,unknown,ok
+29,Ravi,twenty,Ravi@test,2023-05-08,,unknown,duplicate?
+30,Rahul,,Rahul@test,2023-09-19,NaN,,ok
+31,Jane,NaN,,2023-03-07,NaN,unknown,duplicate?
+32,Jane,30,Jane@test,2023-01-24,,active,duplicate?
+33,John,twenty,John@example.com,2023-06-03,NaN,,ok
+34,Amit,twenty,Amit@test,2023-07-18,63.58,active,bad data
+35,Amit,18,Amit@mail.com,2023-05-25,,,bad data
+36, Rahul ,NaN, Rahul @example.com,not_a_date,81.05,,
+37, Karan ,33,,2023-12-29,NaN,active,duplicate?
+38,Amit,NaN,Amit@@mail,2023-12-13,NaN,inactive,bad data
+39,John,19,John@mail.com,not_a_date,,unknown,good
+40,Neha,NaN,Neha@mail,2023-11-20,77.01,unknown,duplicate?
+41,Karan,,Karan@mail.com,2023-04-09,,inactive,good
+42,,NaN,,2023-10-19,,,good
+43,Rahul,twenty,Rahul@test,2023-04-23,,active,
+44,Ravi,NaN,Ravi@test,2023-02-11,NaN,inactive,duplicate?
+45,Simran,,Simran@mail.com,2023-05-15,,,bad data
+46, Sneha ,NaN, Sneha @example.com,2024-01-26,NaN,unknown,
+47,Simran,18,Simran@test,not_a_date,99.25,inactive,
+48,Ali,,,2024-01-30,90.28,,bad data
+49,Karan,twenty,Karan@test,not_a_date,NaN,unknown,ok
+50,Amit,23,,2024-01-12,90.81,active,
+51,Karan,twenty,Karan@example.com,2023-12-01,NaN,,duplicate?
+52,Karan,NaN,Karan@mail,2023-09-18,,inactive,
+53,Jane,21,Jane@@example.com,not_a_date,66.38,unknown,
+54,Ravi,twenty,Ravi@mail.com,2023-12-07,61.89,active,duplicate?
+55,John,,John@example.com,not_a_date,,,ok
+56,Neha,,Neha@mail,2023-07-11,,inactive,
+57,Rahul,twenty,,not_a_date,,unknown,bad data
+58,Rahul,NaN,Rahul@example.com,2023-03-11,NaN,,bad data
+59,Priya,twenty,Priya@@example.com,2023-03-04,NaN,active,ok
+60,Amit,38,Amit@@test,2023-08-08,NaN,active,duplicate?
+61,Simran,34,,2023-03-17,NaN,,bad data
+62,Amit,22,Amit@mail.com,2023-10-26,NaN,unknown,ok
+63,Karan,twenty,Karan@test,2023-07-26,,unknown,bad data
+64,Karan,NaN,Karan@mail,2023-12-22,NaN,active,good
+65,Ali,NaN,Ali@example.com,2023-08-08,,,ok
+66,,31,user@mail.com,2023-10-06,60.34,active,
+67,Simran,39,Simran@mail,2023-07-26,NaN,unknown,duplicate?
+68,John,,,2023-04-16,74.8,unknown,good
+69,Amit,,Amit@mail.com,2023-04-28,98.36,inactive,
+70,Sneha,30,Sneha@mail.com,2023-08-07,,inactive,bad data
+71, Ravi ,33, Ravi @example.com,2023-05-27,78.92,,duplicate?
+72,Jane,twenty,Jane@mail.com,2023-11-01,99.17,inactive,bad data
+73,Sneha,,Sneha@@mail.com,2023-01-01,,active,bad data
+74, Karan ,20, Karan @example.com,2023-03-24,79.12,active,bad data
+75,John,18,,2023-09-08,,unknown,
+76,Neha,19,Neha@@mail.com,2023-09-17,,active,
+77, Priya ,, Priya @example.com,2023-09-26,NaN,active,bad data
+78,Priya,twenty,Priya@@example.com,2023-11-03,,,
+79,Simran,twenty,Simran@example.com,not_a_date,,inactive,duplicate?
+80,Karan,32,Karan@mail.com,2023-07-19,NaN,active,duplicate?
+81,Simran,twenty,Simran@example.com,2023-03-21,NaN,unknown,bad data
+82,John,NaN,John@mail.com,2023-08-31,NaN,inactive,good
+83,Karan,NaN,Karan@@test,2023-07-29,NaN,active,
+84,Jane,NaN,Jane@test,2023-04-30,NaN,inactive,bad data
+85,John,,John@example.com,2023-04-14,75.63,,ok
+86,Neha,34,Neha@test,2024-02-03,NaN,inactive,bad data
+87,Sneha,NaN,Sneha@mail,2023-04-29,NaN,inactive,
+88,Ravi,34,Ravi@test,2023-11-04,NaN,inactive,ok
+89,Karan,,Karan@@test,2023-09-13,,unknown,good
+90,Sneha,twenty,Sneha@test,2023-03-25,NaN,active,good
+91, Rahul ,35, Rahul @test,2023-03-05,NaN,,bad data
+92,Rahul,NaN,Rahul@test,2023-09-29,92.33,,good
+93,Ali,,Ali@@test,2023-08-23,85.23,active,ok
+94, Karan ,NaN, Karan @example.com,2024-01-06,NaN,active,good
+95,Neha,,Neha@test,2024-01-09,98.82,,
+96,John,,John@test,2023-08-16,NaN,unknown,bad data
+97, Sneha ,, Sneha @mail,2023-10-28,NaN,active,good
+98,John,,John@@test,2023-08-28,NaN,unknown,bad data
+99,Ravi,19,Ravi@mail.com,2023-09-07,,inactive,ok
+100,Simran,,Simran@@mail,2023-09-03,NaN,inactive,duplicate?
+101,Sneha,twenty,Sneha@mail.com,2023-09-19,61.57,unknown,bad data
+102,Ravi,29,Ravi@@mail,2023-02-07,NaN,inactive,bad data
+103,,34,,2023-02-04,,active,ok
+104,Neha,,Neha@mail,2023-08-04,,unknown,ok
+105,Ravi,,Ravi@mail,2023-02-02,NaN,unknown,bad data
+106,Jane,twenty,Jane@test,2023-12-19,83.79,inactive,
+107,Neha,,Neha@mail,2023-03-24,,active,
+108,Neha,26,Neha@example.com,2023-07-27,NaN,,good
+109,Neha,,,2023-07-07,NaN,,duplicate?
+110, Neha ,23, Neha @mail,2023-07-28,65.22,active,duplicate?
+111,Jane,40,Jane@@example.com,2023-11-25,80.9,unknown,good
+112,Ali,twenty,Ali@mail,2023-04-17,85.67,active,duplicate?
+113,John,twenty,John@test,2023-02-22,77.3,inactive,duplicate?
+114,Priya,,Priya@@example.com,2023-04-04,71.49,active,duplicate?
+115,Jane,35,Jane@example.com,2023-01-31,76.11,,
+116,Jane,24,Jane@test,2023-03-17,,,duplicate?
+117,Priya,24,Priya@test,2023-01-21,71.12,unknown,bad data
+118, Ali ,20, Ali @example.com,2023-08-13,NaN,active,
+119, John ,twenty, John @example.com,2023-02-02,NaN,,duplicate?
+120,Sneha,twenty,Sneha@example.com,2024-01-20,71.04,inactive,bad data
+121,Neha,twenty,Neha@mail.com,2023-03-01,NaN,,good
+122,Ali,NaN,Ali@mail,2023-11-06,NaN,,duplicate?
+123,Ali,twenty,Ali@mail.com,2023-06-26,,unknown,ok
+124, Rahul ,twenty, Rahul @@mail.com,2023-05-08,,active,ok
+125, Ali ,NaN, Ali @example.com,2023-07-10,63.98,inactive,
+126,Priya,35,Priya@test,2023-01-16,74.98,active,
+127,Priya,23,Priya@@example.com,2023-12-27,,unknown,good
+128,Jane,NaN,Jane@@mail.com,2023-07-14,NaN,active,bad data
+129,Neha,NaN,,2023-07-12,,active,good
+130,Amit,twenty,Amit@mail.com,2023-06-12,84.47,,duplicate?
+131,Sneha,23,Sneha@@test,2023-10-09,69.98,unknown,
+132,Jane,twenty,Jane@mail.com,2023-11-27,86.04,unknown,ok
+133,Sneha,twenty,Sneha@mail.com,2023-12-12,,unknown,good
+134, Neha ,NaN,,not_a_date,98.85,unknown,
+135,Rahul,twenty,Rahul@@test,2023-08-28,70.93,unknown,duplicate?
+136,Amit,,Amit@test,2023-06-22,,active,ok
+137,Jane,35,Jane@@mail.com,not_a_date,NaN,inactive,duplicate?
+138,Ali,twenty,Ali@mail,2023-06-25,,inactive,
+139, Simran ,, Simran @mail.com,2023-08-04,81.23,active,duplicate?
+140,Sneha,,Sneha@@test,2024-02-02,,unknown,
+141,Karan,twenty,Karan@example.com,not_a_date,NaN,inactive,ok
+142,John,33,John@mail,2023-05-26,NaN,inactive,bad data
+143,Sneha,25,Sneha@mail,2023-12-14,,,duplicate?
+144,Neha,NaN,Neha@@mail.com,2023-06-09,,unknown,duplicate?
+145,Ali,,Ali@mail,2023-06-03,,,bad data
+146,Amit,,,2023-10-21,,,duplicate?
+147,Simran,,Simran@test,2023-07-25,NaN,unknown,good
+148,John,NaN,John@example.com,2024-02-04,NaN,,
+149, Amit ,NaN, Amit @@mail,2023-05-27,,unknown,
+150,Neha,,Neha@example.com,not_a_date,NaN,unknown,bad data
+151,,27,user@example.com,2023-05-06,NaN,active,good
+152,Karan,,Karan@test,2023-02-13,66.18,inactive,ok
+153, Amit ,NaN, Amit @mail.com,2023-06-09,NaN,,good
+154,Karan,33,Karan@mail.com,2023-02-05,NaN,inactive,duplicate?
+155,Jane,NaN,Jane@mail.com,2023-04-28,,,good
+156,Amit,twenty,Amit@mail.com,2023-06-03,60.34,unknown,bad data
+157,Priya,22,Priya@mail,2023-06-24,,unknown,
+158, Ali ,twenty, Ali @mail.com,2024-01-30,90.08,unknown,bad data
+159,Ravi,20,Ravi@@test,2023-01-09,NaN,,bad data
+160,,twenty,user@example.com,not_a_date,,active,
+161,Ali,twenty,Ali@example.com,2023-01-14,NaN,active,
+162,Karan,40,Karan@mail,2023-08-28,,unknown,duplicate?
+163,Simran,,Simran@test,2023-10-01,,inactive,good
+164,Ali,twenty,Ali@@mail,2024-01-21,NaN,inactive,bad data
+165,Sneha,30,,2023-01-22,NaN,,
+166,John,33,John@@test,2023-09-28,85.59,inactive,
+167, Sneha ,34, Sneha @mail.com,2023-04-24,NaN,active,bad data
+168,,NaN,user@@mail,2023-02-19,,inactive,good
+169,Ali,28,Ali@example.com,2023-07-22,72.25,unknown,bad data
+170,Simran,NaN,Simran@mail.com,2023-05-28,63.87,active,bad data
+171,Amit,22,,2023-01-14,NaN,active,good
+172,Rahul,33,Rahul@mail.com,2023-03-24,,unknown,good
+173,Simran,twenty,Simran@mail.com,2023-06-29,65.39,inactive,
+174,Ali,NaN,,not_a_date,83.58,inactive,good
+175,Karan,NaN,Karan@example.com,2023-07-28,88.33,,duplicate?
+176,Amit,NaN,Amit@test,2024-02-04,NaN,active,
+177,Sneha,twenty,Sneha@mail.com,2023-04-11,NaN,inactive,duplicate?
+178,Karan,twenty,Karan@example.com,2023-03-10,91.95,,
+179,Karan,NaN,Karan@mail,2023-04-25,78.2,,good
+180,Sneha,twenty,Sneha@mail,2023-08-22,79.42,inactive,duplicate?
+181,Neha,twenty,Neha@test,2023-01-17,73.1,inactive,duplicate?
+182,Simran,,Simran@mail,2023-03-25,NaN,inactive,bad data
+183,Amit,NaN,,2023-03-04,89.03,inactive,good
+184,Jane,,Jane@test,2023-09-14,NaN,inactive,bad data
+185,Sneha,twenty,Sneha@@mail,2023-08-02,65.82,,
+186,Jane,39,Jane@mail,2023-08-17,84.79,inactive,
+187,,27,user@mail,2024-01-11,87.69,inactive,good
+188,Ali,19,Ali@test,2023-06-01,,active,good
+189,John,,John@mail.com,2023-11-15,75.3,inactive,ok
+190,Sneha,,Sneha@test,2023-07-05,62.6,unknown,ok
+191,Sneha,NaN,Sneha@test,2023-01-04,72.64,,
+192,Ali,twenty,Ali@@test,2023-09-05,NaN,unknown,good
+193,Jane,NaN,Jane@example.com,2023-08-13,,unknown,bad data
+194,Ali,,Ali@@mail.com,2023-07-01,,inactive,bad data
+195,Ravi,twenty,Ravi@test,2024-01-08,78.24,inactive,good
+196,Rahul,twenty,Rahul@@example.com,2023-06-03,NaN,active,good
+197,Amit,,Amit@example.com,2023-11-21,,unknown,good
+198, Simran ,twenty,,2023-11-21,NaN,active,ok
+199,Amit,31,Amit@mail.com,2023-07-06,60.57,unknown,bad data
+200,Jane,,Jane@@example.com,2023-12-23,81.46,,ok
+201, John ,twenty,,2023-01-17,97.46,unknown,ok
+202,Ali,,Ali@example.com,2023-09-02,69.72,active,ok
+203,Karan,NaN,,2023-08-20,77.96,active,good
+204,Rahul,,Rahul@mail,2023-05-08,,inactive,
+205,Ravi,NaN,Ravi@mail,2023-10-24,80.02,inactive,
+206,,NaN,user@mail,2023-07-05,,active,duplicate?
+207,Simran,NaN,,2023-06-15,NaN,unknown,duplicate?
+208,Rahul,NaN,Rahul@example.com,2024-01-02,76.96,inactive,good
+209,Simran,twenty,Simran@mail.com,2023-01-10,NaN,inactive,bad data
+210,Karan,23,Karan@test,2023-10-20,NaN,unknown,ok
+211,Rahul,,,2023-11-28,,active,bad data
+212,Rahul,NaN,,2023-10-07,60.21,unknown,ok
+213,Amit,twenty,Amit@mail.com,2023-04-09,94.88,,ok
+214,Karan,NaN,Karan@test,2024-01-31,NaN,,good
+215,Karan,twenty,Karan@@mail.com,2023-09-13,61.2,,duplicate?
+216,John,,John@mail.com,2023-07-14,,inactive,bad data
+217,Simran,NaN,Simran@mail.com,2023-12-05,NaN,,bad data
+218,Neha,twenty,,2023-07-10,,active,bad data
+219,Karan,35,Karan@mail.com,2024-01-11,98.91,,ok
+220,Jane,NaN,,2023-07-21,,,good
+221,Ali,NaN,Ali@example.com,2023-12-13,94.5,active,ok
+222,Rahul,NaN,Rahul@example.com,not_a_date,,active,good
+223,Karan,NaN,Karan@mail,2023-02-07,NaN,,ok
+224,Rahul,NaN,Rahul@example.com,not_a_date,96.68,active,
+225,Priya,,Priya@test,2023-01-15,60.76,active,bad data
+226,Priya,27,Priya@example.com,2023-01-30,NaN,inactive,ok
+227,Rahul,19,Rahul@@example.com,2023-09-11,NaN,inactive,duplicate?
+228,Rahul,NaN,,not_a_date,60.92,,bad data
+229,John,,John@mail.com,2023-05-15,NaN,,good
+230,Karan,,Karan@@example.com,2024-01-19,,,ok
+231,Simran,twenty,Simran@@mail.com,not_a_date,,,ok
+232,Priya,twenty,Priya@test,2023-12-25,63.1,,duplicate?
+233, Priya ,twenty, Priya @example.com,not_a_date,,unknown,ok
+234,Priya,,Priya@example.com,2023-06-16,NaN,unknown,bad data
+235,Karan,,Karan@example.com,2023-01-27,NaN,,
+236,Karan,38,Karan@test,2023-03-28,NaN,unknown,ok
+237,Ravi,19,Ravi@mail,not_a_date,NaN,,duplicate?
+238,Rahul,NaN,Rahul@test,2023-08-07,,unknown,good
+239,Simran,twenty,Simran@@example.com,2023-01-13,99.93,active,duplicate?
+240,Jane,twenty,Jane@mail.com,2023-03-23,,unknown,bad data
+241,Karan,,Karan@@example.com,2023-03-19,,inactive,bad data
+242,John,33,John@test,not_a_date,NaN,,good
+243,,,user@mail.com,2023-03-04,NaN,unknown,ok
+244,Neha,twenty,Neha@test,2023-05-16,,,
+245,Priya,twenty,Priya@@mail,2023-07-29,,unknown,bad data
+246,Sneha,twenty,Sneha@example.com,2023-04-25,NaN,active,
+247,Priya,twenty,Priya@test,2024-02-01,NaN,active,ok
+248,Amit,,Amit@mail,2023-06-21,68.06,unknown,duplicate?
+249,Simran,twenty,Simran@test,2023-05-17,NaN,unknown,
+250,Rahul,39,Rahul@mail.com,2024-01-14,NaN,active,
+251,Neha,NaN,,2023-02-28,,active,duplicate?
+252,Rahul,NaN,Rahul@example.com,2023-05-27,NaN,,
+253,Simran,twenty,Simran@@mail,not_a_date,,inactive,ok
+254,John,35,John@@test,2023-06-22,67.2,unknown,good
+255,Ali,24,,not_a_date,NaN,active,duplicate?
+256,Simran,NaN,Simran@@example.com,2023-05-12,98.82,,
+257,Jane,NaN,Jane@test,2023-08-11,62.66,,duplicate?
+258, Neha ,twenty, Neha @test,2023-05-08,91.28,inactive,ok
+259,John,19,John@test,2023-07-13,,active,duplicate?
+260,Karan,,Karan@example.com,2023-06-14,77.17,inactive,good
+261,Karan,twenty,,2023-09-08,83.29,inactive,
+262,Ali,NaN,Ali@example.com,2023-09-09,97.78,inactive,duplicate?
+263,,NaN,user@mail,2023-09-01,,,ok
+264,Simran,NaN,Simran@test,2023-11-29,,,bad data
+265,Rahul,twenty,Rahul@mail.com,2023-01-12,,,
+266,John,twenty,John@test,2023-08-13,NaN,unknown,duplicate?
+267,Simran,29,Simran@@mail.com,2023-09-12,,unknown,good
+268,Ravi,,Ravi@mail,not_a_date,NaN,unknown,
+269,Amit,27,,2023-07-20,NaN,active,bad data
+270,Priya,,Priya@mail.com,2023-07-30,NaN,unknown,ok
+271,Priya,NaN,Priya@example.com,2024-01-01,90.64,unknown,ok
+272,Ali,NaN,Ali@mail.com,not_a_date,NaN,active,ok
+273, Rahul ,NaN, Rahul @test,2023-07-19,NaN,unknown,duplicate?
+274,John,,John@mail.com,2023-01-16,NaN,unknown,good
+275, Priya ,twenty, Priya @mail.com,2024-01-24,82.82,,
+276,Ali,33,Ali@test,2023-09-14,NaN,unknown,good
+277,,,user@mail.com,2023-01-08,,unknown,
+278,Priya,33,Priya@mail.com,2023-03-20,NaN,active,good
+279,Ali,NaN,,2023-11-21,NaN,,duplicate?
+280,Priya,27,Priya@test,2023-09-10,76.76,active,ok
+281,,,user@@example.com,2023-11-05,NaN,,ok
+282,Ravi,NaN,Ravi@mail.com,2023-08-28,,active,duplicate?
+283,Rahul,NaN,Rahul@mail.com,2023-09-02,,,duplicate?
+284,Neha,twenty,Neha@example.com,2023-04-11,,unknown,duplicate?
+285,Neha,,Neha@mail,not_a_date,,active,good
+286,Ali,,Ali@@example.com,2023-07-13,80.79,,
+287,John,twenty,John@mail,2023-04-06,NaN,,ok
+288,Rahul,NaN,Rahul@mail.com,2023-05-05,NaN,inactive,bad data
+289,Ali,NaN,Ali@test,2023-11-23,,inactive,ok
+290,Amit,,Amit@@mail,2023-08-10,NaN,active,
+291,Amit,18,Amit@mail.com,2023-09-09,,active,duplicate?
+292,Amit,twenty,Amit@mail,2023-01-09,88.82,inactive,bad data
+293, Simran ,twenty, Simran @@mail,2023-09-23,NaN,active,ok
+294,Neha,,Neha@mail,2023-11-13,,,duplicate?
+295,Simran,27,Simran@@mail.com,2023-01-14,NaN,,
+296,John,28,John@mail.com,not_a_date,80.2,inactive,good
+297,Ali,35,Ali@@mail,2023-12-11,,,
+298,Rahul,NaN,Rahul@@mail.com,2023-06-23,NaN,unknown,duplicate?
+299,Karan,36,,2023-04-18,,active,ok
+300,Amit,NaN,Amit@@test,2023-08-17,NaN,active,
+301, Rahul ,, Rahul @mail.com,2023-06-25,80.16,active,good
+302,Ravi,29,Ravi@example.com,2023-09-25,88.25,,
+303,Priya,NaN,Priya@@mail.com,2023-11-13,NaN,unknown,good
+304,Ali,NaN,Ali@mail,2023-06-18,60.92,inactive,ok
+305,Jane,NaN,Jane@example.com,2023-07-14,,active,good
+306,John,NaN,John@test,2023-03-21,97.8,active,duplicate?
+307,Ravi,,Ravi@mail,2024-01-24,86.88,active,bad data
+308,Neha,twenty,,2023-07-03,82.14,unknown,bad data
+309,Simran,NaN,Simran@@mail.com,2023-04-26,NaN,,ok
+310,Simran,twenty,Simran@mail.com,2023-05-31,,,bad data
+311,Jane,,Jane@test,2023-10-03,96.25,unknown,duplicate?
+312, Ali ,, Ali @mail.com,2023-11-25,96.76,,duplicate?
+313,Ravi,twenty,Ravi@test,2023-07-17,66.29,active,
+314,Priya,,Priya@test,2023-11-29,,inactive,ok
+315,Simran,NaN,Simran@mail,2023-07-29,,active,ok
+316,,18,,2023-11-01,,inactive,ok
+317,Neha,,Neha@example.com,2024-01-23,,,
+318,Neha,,Neha@mail,2023-06-20,NaN,unknown,ok
+319,Karan,NaN,,not_a_date,NaN,active,bad data
+320,Ravi,twenty,Ravi@mail.com,2023-05-15,92.16,,bad data
+321,Neha,NaN,Neha@mail.com,2023-09-01,NaN,inactive,ok
+322,Priya,33,Priya@mail,2023-10-06,NaN,,bad data
+323,Neha,twenty,Neha@mail,2023-06-05,96.15,inactive,bad data
+324,Amit,twenty,Amit@example.com,not_a_date,86.4,,
+325,Priya,NaN,Priya@example.com,2023-12-03,,,duplicate?
+326,John,twenty,John@mail,2023-10-04,NaN,active,duplicate?
+327,Karan,twenty,Karan@example.com,2023-03-21,89.54,active,good
+328,Rahul,23,Rahul@test,2023-06-25,77.44,inactive,ok
+329,Amit,NaN,Amit@mail.com,2023-04-01,,inactive,good
+330,Ravi,NaN,Ravi@mail.com,2023-06-24,68.38,active,ok
+331,John,,John@example.com,2023-05-19,NaN,unknown,bad data
+332,,NaN,user@test,2023-02-09,,,
+333,Simran,twenty,Simran@mail,2023-12-14,76.7,,good
+334,Simran,34,Simran@example.com,2023-08-16,83.23,unknown,
+335, Ravi ,twenty,,2023-08-30,,unknown,duplicate?
+336,Jane,25,Jane@@test,2023-06-07,65.58,unknown,good
+337,Rahul,twenty,Rahul@mail,2023-04-17,NaN,active,duplicate?
+338,Priya,NaN,Priya@mail,2023-09-23,,active,ok
+339,John,NaN,John@mail.com,2023-04-19,82.5,,
+340,Rahul,NaN,Rahul@mail.com,2023-03-12,NaN,active,bad data
+341,Sneha,twenty,Sneha@example.com,2023-08-17,,inactive,
+342,Simran,NaN,Simran@mail,2023-01-02,92.96,unknown,bad data
+343,Simran,,Simran@mail.com,2023-11-10,,active,duplicate?
+344,Karan,NaN,Karan@test,2023-02-02,NaN,inactive,good
+345, Amit ,24, Amit @mail.com,2023-07-01,NaN,active,
+346, Priya ,twenty, Priya @mail,not_a_date,NaN,inactive,duplicate?
+347, John ,31, John @mail.com,2023-01-28,74.84,unknown,ok
+348,Karan,NaN,Karan@mail,2023-04-25,,,good
+349,Ravi,,Ravi@test,2023-01-09,73.71,unknown,duplicate?
+350,Simran,twenty,Simran@mail.com,2023-05-24,85.98,,duplicate?
+351,Neha,40,Neha@@test,2023-12-23,NaN,unknown,good
+352,Amit,NaN,Amit@mail,2023-03-28,NaN,,duplicate?
+353,Neha,,Neha@mail.com,2023-03-28,93.27,,duplicate?
+354,,NaN,user@test,2023-03-09,89.06,inactive,duplicate?
+355,Jane,20,Jane@test,2023-01-22,74.04,active,
+356,Ravi,NaN,Ravi@mail,2023-05-12,,unknown,bad data
+357,Jane,,,2023-02-04,NaN,unknown,
+358,Ravi,twenty,Ravi@mail.com,2023-03-02,72.07,,good
+359,Jane,NaN,Jane@@test,2023-08-13,,unknown,duplicate?
+360,Neha,,Neha@@mail.com,2023-06-13,NaN,inactive,ok
+361,Simran,,Simran@mail,2023-02-21,82.24,active,good
+362,John,NaN,John@@example.com,2023-04-23,85.11,active,bad data
+363,Amit,NaN,Amit@test,2023-01-06,83.6,active,good
+364,Karan,26,Karan@@mail,2023-10-06,68.17,unknown,
+365,Simran,36,Simran@@example.com,2023-04-03,,inactive,bad data
+366, Neha ,twenty, Neha @mail,2023-11-16,NaN,,bad data
+367,Priya,twenty,Priya@example.com,2023-08-05,98.34,,duplicate?
+368,Ali,32,Ali@example.com,2023-11-13,,unknown,bad data
+369,Ali,28,Ali@mail.com,2024-02-01,NaN,active,good
+370,Neha,38,Neha@example.com,2023-07-16,,inactive,bad data
+371,John,,John@mail.com,2023-09-22,,active,duplicate?
+372,Ravi,NaN,Ravi@mail,2023-05-05,,active,bad data
+373,John,twenty,John@mail,not_a_date,,unknown,good
+374,Sneha,,Sneha@mail,not_a_date,75.46,,bad data
+375,Jane,40,Jane@@mail,2023-02-10,79.23,,bad data
+376,Sneha,twenty,Sneha@mail,not_a_date,,unknown,
+377,Sneha,NaN,Sneha@example.com,2023-09-02,NaN,,ok
+378,Amit,NaN,Amit@mail.com,2023-02-25,93.48,,
+379,Karan,,Karan@mail.com,2023-06-19,,,
+380,Karan,NaN,Karan@mail,2023-11-02,60.92,active,duplicate?
+381,Ravi,,Ravi@test,not_a_date,87.77,unknown,
+382,Sneha,,Sneha@mail,2023-01-17,89.55,inactive,bad data
+383,Priya,,Priya@test,2024-01-17,90.85,active,
+384,Ravi,,Ravi@example.com,2023-11-29,NaN,unknown,ok
+385,Karan,NaN,Karan@@mail,2023-08-10,,inactive,duplicate?
+386,Amit,NaN,Amit@mail,2024-02-05,,active,ok
+387,John,,John@example.com,2023-10-14,74.66,,bad data
+388,Ravi,twenty,,2024-01-09,,unknown,duplicate?
+389,Jane,24,Jane@test,2023-01-02,,unknown,duplicate?
+390,,NaN,user@@test,2023-07-07,NaN,unknown,duplicate?
+391,Simran,NaN,Simran@mail,2024-01-02,,inactive,duplicate?
+392,Jane,,Jane@mail.com,2023-09-28,86.01,unknown,bad data
+393,Jane,24,Jane@example.com,2023-08-11,NaN,unknown,good
+394,Rahul,25,Rahul@example.com,2023-01-07,NaN,inactive,
+395,Ali,twenty,Ali@test,2023-09-13,,inactive,bad data
+396,Amit,twenty,Amit@example.com,2023-11-05,NaN,unknown,duplicate?
+397,Priya,19,Priya@mail,2023-04-20,99.27,active,good
+398,Ali,twenty,Ali@example.com,2023-05-27,,unknown,bad data
+399,Ravi,40,Ravi@mail,2023-10-19,69.09,,duplicate?
+400, John ,twenty, John @mail.com,2023-07-24,,active,bad data
+401,Neha,,Neha@example.com,2023-10-23,,active,bad data
+402,Priya,,Priya@mail,2024-01-15,75.01,inactive,ok
+403,Karan,19,Karan@@test,2023-06-22,70.74,unknown,good
+404,Ali,twenty,Ali@mail,2023-03-21,84.12,inactive,duplicate?
+405,Karan,twenty,Karan@example.com,2023-07-03,NaN,active,duplicate?
+406, Priya ,NaN, Priya @mail.com,2023-02-12,,,
+407, Neha ,, Neha @mail.com,2023-12-21,NaN,active,bad data
+408,Ravi,21,Ravi@example.com,2023-02-01,,,ok
+409,Simran,,Simran@example.com,2023-09-09,,active,
+410,Jane,twenty,Jane@test,2023-11-22,,active,duplicate?
+411,Jane,NaN,Jane@@example.com,not_a_date,NaN,,ok
+412,Sneha,33,Sneha@@mail.com,2023-02-24,NaN,,good
+413,Rahul,NaN,Rahul@@mail.com,2023-09-30,,,
+414,Ali,twenty,Ali@@mail.com,2023-11-30,88.25,active,duplicate?
+415, Ali ,, Ali @mail.com,2023-09-06,,,bad data
+416,Rahul,twenty,Rahul@mail,2023-04-16,72.91,inactive,duplicate?
+417,John,,John@test,2023-10-16,71.27,active,duplicate?
+418,Neha,,Neha@example.com,2023-01-17,NaN,active,ok
+419,Sneha,,Sneha@test,2024-01-26,91.14,,ok
+420,Ravi,twenty,Ravi@@test,2024-02-05,,,duplicate?
+421,Ali,NaN,Ali@mail,2023-09-29,NaN,active,
+422,Sneha,36,Sneha@example.com,2023-03-27,NaN,unknown,ok
+423,Simran,twenty,Simran@mail.com,2023-01-17,,unknown,ok
+424,John,twenty,John@@mail.com,2023-01-26,,inactive,
+425,Simran,NaN,Simran@mail,not_a_date,NaN,active,good
+426,Rahul,25,Rahul@example.com,2023-07-08,,,
+427,Simran,22,Simran@example.com,2023-02-13,,,bad data
+428,Simran,twenty,Simran@example.com,2023-01-28,,unknown,ok
+429,Sneha,twenty,Sneha@test,2023-05-09,,inactive,good
+430,John,39,John@mail,2023-11-18,,,good
+431, Ravi ,NaN, Ravi @@example.com,not_a_date,NaN,unknown,duplicate?
+432,,NaN,user@mail.com,2024-01-28,63.96,unknown,
+433,Neha,twenty,Neha@mail.com,2023-09-09,,active,bad data
+434,Amit,twenty,Amit@mail,2023-11-28,NaN,inactive,
+435,Simran,NaN,Simran@mail.com,2023-10-11,,unknown,bad data
+436,Ali,,Ali@test,2023-12-24,NaN,,duplicate?
+437,Ali,twenty,Ali@mail,2023-08-31,79.01,active,
+438, Priya ,twenty, Priya @mail,2023-01-01,83.54,active,duplicate?
+439,Sneha,NaN,Sneha@mail,2023-05-12,80.69,,
+440,Amit,,Amit@mail,2023-07-13,,inactive,duplicate?
+441, Ali ,, Ali @@mail.com,2023-10-12,67.93,unknown,
+442,Ali,twenty,Ali@mail.com,2023-03-28,72.72,,ok
+443,,40,user@test,2023-02-17,,,
+444,Priya,,Priya@mail.com,2023-02-23,NaN,inactive,good
+445,Ali,,Ali@example.com,2023-03-09,NaN,,good
+446,Karan,31,Karan@test,2023-06-28,NaN,,
+447,Amit,twenty,Amit@mail.com,not_a_date,96.75,active,
+448,Rahul,,,2023-02-18,78.3,active,ok
+449,Karan,twenty,Karan@example.com,2023-11-13,,inactive,good
+450,Rahul,twenty,Rahul@example.com,2024-01-02,,inactive,
+451,Simran,NaN,Simran@example.com,2023-02-05,NaN,,duplicate?
+452,John,NaN,John@mail,2023-12-17,92.7,unknown,duplicate?
+453,Ali,26,Ali@test,2023-11-20,77.87,unknown,duplicate?
+454,Jane,24,,not_a_date,,,good
+455,,NaN,,2023-04-11,85.56,inactive,duplicate?
+456,Sneha,,Sneha@test,2023-02-07,99.94,active,duplicate?
+457,Priya,NaN,Priya@mail,2023-04-28,NaN,active,bad data
+458,Ali,,Ali@test,2023-01-24,81.88,,bad data
+459,Ali,twenty,Ali@@mail,2023-06-02,NaN,active,bad data
+460,Simran,,Simran@mail,2023-02-13,,unknown,good
+461,Priya,30,Priya@example.com,2023-10-14,,inactive,bad data
+462,Amit,NaN,Amit@mail,not_a_date,90.98,,ok
+463,Ravi,33,Ravi@@mail,2023-03-03,NaN,active,duplicate?
+464,John,twenty,John@example.com,2023-03-17,75.44,active,bad data
+465,Rahul,NaN,Rahul@example.com,2023-11-26,,active,duplicate?
+466,Neha,39,Neha@test,2023-02-01,,unknown,duplicate?
+467,John,20,John@test,2023-01-09,,inactive,bad data
+468,Sneha,25,,2023-02-02,83.73,,duplicate?
+469,Ali,NaN,Ali@mail.com,2023-07-27,66.32,,bad data
+470, Karan ,36, Karan @mail.com,not_a_date,,active,
+471,John,31,John@mail,2023-08-08,77.73,inactive,ok
+472,Neha,NaN,Neha@mail.com,2023-10-24,NaN,active,ok
+473, Amit ,twenty, Amit @mail,2023-12-15,NaN,unknown,good
+474, Ravi ,18, Ravi @example.com,2023-04-22,69.32,unknown,good
+475,Amit,twenty,,2023-07-26,,inactive,duplicate?
+476,Ali,20,Ali@mail.com,2023-12-13,NaN,,good
+477,Ali,NaN,Ali@example.com,2023-03-18,NaN,inactive,bad data
+478,Sneha,twenty,Sneha@test,2023-07-29,NaN,,ok
+479,Amit,18,Amit@@mail.com,2023-09-03,63.78,,good
+480,Rahul,,Rahul@mail.com,2023-12-09,NaN,active,ok
+481,Neha,,Neha@mail,not_a_date,NaN,active,duplicate?
+482, Ali ,19, Ali @example.com,2023-03-23,NaN,unknown,
+483,Neha,25,Neha@example.com,2023-10-29,NaN,,duplicate?
+484,Amit,,Amit@@example.com,2023-07-19,89.82,inactive,duplicate?
+485,Simran,twenty,Simran@mail,2023-03-06,87.22,inactive,duplicate?
+486,John,NaN,,2023-01-08,90.84,unknown,duplicate?
+487,Ali,36,Ali@test,2023-03-13,NaN,inactive,duplicate?
+488,Amit,twenty,Amit@@example.com,2024-01-29,,active,good
+489, Neha ,, Neha @mail.com,2023-03-24,NaN,active,duplicate?
+490,Sneha,NaN,Sneha@mail,2023-02-26,74.64,,good
+491,Karan,twenty,Karan@example.com,2023-10-26,NaN,active,bad data
+492,Ali,25,Ali@example.com,2023-09-13,,,bad data
+493,Sneha,20,Sneha@mail,2023-05-23,,inactive,ok
+494,Jane,,Jane@example.com,not_a_date,NaN,,ok
+495,Priya,,Priya@mail.com,2023-11-16,,,bad data
+496,Simran,NaN,Simran@mail.com,2023-05-13,NaN,,ok
+497,,30,user@test,2023-12-18,,,bad data
+498,Simran,NaN,Simran@mail.com,not_a_date,93.41,,ok
+499, Ali ,, Ali @mail.com,2023-01-21,94.92,active,good
+500,,NaN,user@mail,2024-01-07,87.09,unknown,good
+501,Sneha,twenty,Sneha@@mail,2023-04-02,60.06,,bad data
+502,Ravi,21,Ravi@mail,2023-05-28,71.45,,ok
+503,Karan,twenty,Karan@@mail,2023-07-02,NaN,inactive,good
+504,Simran,34,Simran@mail,2023-12-16,NaN,active,ok
+505,Rahul,NaN,Rahul@mail.com,2023-12-14,,unknown,good
+506,Ali,twenty,Ali@mail.com,2023-05-03,60.32,,good
+507,Amit,NaN,Amit@example.com,2023-10-24,64.16,,duplicate?
+508,Simran,33,Simran@mail.com,not_a_date,NaN,active,duplicate?
+509,Sneha,twenty,Sneha@mail.com,2023-08-01,,unknown,good
+510,,NaN,user@example.com,2023-02-25,NaN,unknown,duplicate?
+511,Ravi,37,Ravi@mail.com,2023-04-12,NaN,active,duplicate?
+512,Priya,twenty,Priya@mail,not_a_date,NaN,,ok
+513, Simran ,, Simran @mail,2023-04-18,NaN,,good
+514,Rahul,twenty,,2023-06-18,74.3,,good
+515,Sneha,30,Sneha@mail,2023-09-05,89.2,unknown,ok
+516,Rahul,twenty,Rahul@mail.com,2023-01-06,NaN,inactive,good
+517,Simran,37,Simran@mail,2023-08-05,66.54,,duplicate?
+518,Ali,NaN,Ali@@mail.com,2023-11-12,NaN,,bad data
+519,John,twenty,John@example.com,2023-04-25,NaN,inactive,duplicate?
+520,Priya,20,Priya@example.com,2024-01-12,NaN,unknown,duplicate?
+521,,twenty,user@mail,not_a_date,NaN,inactive,good
+522,Sneha,twenty,Sneha@mail,2023-05-16,NaN,inactive,good
+523,Ali,twenty,Ali@mail.com,2023-12-27,,active,good
+524,Priya,38,Priya@test,2023-06-17,NaN,inactive,ok
+525,Simran,26,Simran@mail,2023-01-09,72.06,,good
+526,Priya,NaN,Priya@test,2023-01-28,,inactive,good
+527,Simran,twenty,Simran@mail.com,2023-10-14,NaN,unknown,good
+528,,,user@mail,2023-07-08,NaN,,
+529,Neha,,Neha@@mail.com,not_a_date,NaN,unknown,duplicate?
+530, Neha ,twenty,,2023-07-23,75.79,unknown,duplicate?
+531,Sneha,NaN,Sneha@test,2023-08-07,NaN,inactive,duplicate?
+532,Priya,NaN,Priya@test,2024-01-28,NaN,,good
+533,Simran,twenty,Simran@test,2023-10-13,NaN,inactive,bad data
+534,John,NaN,John@example.com,2024-01-30,NaN,,
+535,,,user@example.com,2023-12-14,,unknown,duplicate?
+536,Simran,NaN,Simran@@mail.com,2023-01-07,NaN,inactive,good
+537,Priya,twenty,Priya@mail,2023-05-25,NaN,,bad data
+538,Priya,,Priya@@mail,2023-11-18,99.94,unknown,ok
+539, Priya ,NaN, Priya @@mail.com,2023-08-09,NaN,,ok
+540,Rahul,twenty,Rahul@@test,2023-06-20,99.8,active,bad data
+541, Ravi ,40, Ravi @test,2023-07-07,NaN,active,good
+542,Rahul,twenty,Rahul@mail,2024-01-18,NaN,active,good
+543,Rahul,NaN,,2023-10-12,,unknown,duplicate?
+544,Neha,,Neha@example.com,2023-05-11,,,ok
+545,Jane,NaN,Jane@mail,2023-07-02,94.88,,duplicate?
+546,Neha,,Neha@mail,2023-01-03,NaN,,ok
+547,John,twenty,,2023-08-21,NaN,unknown,duplicate?
+548,Rahul,twenty,Rahul@mail.com,2023-12-01,,unknown,duplicate?
+549,Ravi,,Ravi@mail.com,2023-05-27,78.52,unknown,good
+550,Ali,NaN,Ali@mail,2023-09-12,97.1,inactive,
+551,Rahul,19,Rahul@@test,not_a_date,,active,good
+552,Neha,37,Neha@example.com,2024-01-29,62.58,inactive,duplicate?
+553,Neha,NaN,Neha@test,2023-05-13,,inactive,duplicate?
+554,Jane,22,Jane@mail.com,not_a_date,NaN,inactive,duplicate?
+555,Simran,NaN,Simran@@test,2023-06-13,NaN,active,bad data
+556,Priya,NaN,Priya@mail,2023-12-21,NaN,,
+557,Karan,NaN,Karan@@mail,2023-11-19,,active,
+558, Rahul ,34, Rahul @example.com,2024-01-12,,inactive,good
+559,Karan,32,Karan@mail.com,2023-09-21,NaN,unknown,bad data
+560,John,twenty,John@@example.com,2023-08-08,NaN,unknown,good
+561,Priya,28,,2023-01-29,,inactive,good
+562,Amit,,Amit@mail,2023-11-15,90.87,inactive,ok
+563,Ali,,Ali@mail.com,2023-06-25,,unknown,ok
+564,Amit,,Amit@mail,2023-03-18,,active,bad data
+565,Amit,31,Amit@@example.com,2023-09-10,NaN,unknown,bad data
+566,Amit,twenty,Amit@@example.com,2023-03-20,NaN,unknown,duplicate?
+567,Neha,twenty,Neha@mail,2023-01-04,76.48,,good
+568, Amit ,29,,2023-06-12,,active,bad data
+569, Jane ,, Jane @mail.com,2024-01-24,,active,duplicate?
+570,Simran,28,Simran@example.com,2023-01-14,83.53,,bad data
+571,Jane,,Jane@mail,2023-07-15,62.54,,duplicate?
+572,Simran,,Simran@test,2023-07-08,,,duplicate?
+573, John ,34, John @mail,2023-09-12,,unknown,duplicate?
+574,Karan,NaN,Karan@example.com,2023-03-15,80.91,,
+575,Priya,36,Priya@mail,2023-04-19,NaN,unknown,duplicate?
+576,Karan,35,Karan@mail.com,2023-10-15,NaN,active,duplicate?
+577,Neha,twenty,Neha@example.com,2023-12-20,NaN,active,duplicate?
+578,Sneha,twenty,Sneha@mail,2023-07-20,,active,
+579,Ravi,24,Ravi@mail.com,2023-05-22,NaN,,duplicate?
+580,Amit,31,Amit@test,2023-09-14,84.1,inactive,ok
+581,Ali,twenty,Ali@test,2023-09-02,NaN,active,ok
+582,Rahul,twenty,Rahul@@test,2023-10-15,,inactive,ok
+583,Sneha,40,Sneha@mail,2023-03-30,82.44,,duplicate?
+584,Sneha,,Sneha@@mail,2023-10-24,NaN,inactive,bad data
+585,Karan,twenty,Karan@@mail.com,not_a_date,,,duplicate?
+586,Karan,twenty,Karan@mail.com,2023-12-21,77.87,,ok
+587,Neha,twenty,Neha@example.com,2023-10-08,NaN,unknown,good
+588, John ,NaN, John @test,not_a_date,74.46,inactive,duplicate?
+589,,,user@@test,2023-11-17,NaN,active,ok
+590,Jane,,Jane@mail,2023-08-25,,active,duplicate?
+591,,NaN,user@test,2023-04-19,,unknown,good
+592,John,18,John@test,2023-08-14,NaN,inactive,duplicate?
+593,Priya,twenty,,2023-02-14,NaN,unknown,duplicate?
+594, Priya ,35, Priya @example.com,2023-11-07,71.22,unknown,good
+595,Amit,NaN,Amit@mail,not_a_date,,unknown,
+596,Neha,twenty,Neha@example.com,not_a_date,67.85,active,bad data
+597,,twenty,,2023-12-28,NaN,,ok
+598,Ali,,Ali@@example.com,2023-05-06,73.33,active,
+599,Jane,twenty,Jane@@test,2023-11-13,NaN,,
+600, Neha ,twenty, Neha @@example.com,2023-07-30,81.01,inactive,
+601,John,,John@test,2023-11-18,71.02,inactive,ok
+602,John,NaN,John@@mail.com,not_a_date,,,bad data
+603,Rahul,twenty,Rahul@example.com,2023-07-27,NaN,,ok
+604,Rahul,,Rahul@example.com,not_a_date,NaN,inactive,good
+605,Priya,33,Priya@mail.com,not_a_date,98.21,unknown,bad data
+606,Ali,twenty,Ali@example.com,2023-11-26,87.09,inactive,
+607, John ,40, John @mail.com,2023-09-29,97.81,unknown,ok
+608,Neha,,Neha@mail.com,2023-05-21,NaN,,
+609,Amit,NaN,Amit@test,2023-08-04,,,
+610, Jane ,twenty, Jane @mail,2023-11-10,NaN,inactive,bad data
+611,John,,,2023-08-07,NaN,inactive,
+612,Ali,twenty,Ali@example.com,2024-01-19,NaN,unknown,bad data
+613,Amit,NaN,Amit@example.com,2023-05-16,,,good
+614,Rahul,,Rahul@test,2023-06-08,NaN,,duplicate?
+615,Ravi,twenty,Ravi@mail.com,2024-01-09,88.19,active,good
+616,Karan,27,,2023-01-01,NaN,,
+617, Jane ,, Jane @test,2023-04-21,,inactive,ok
+618,John,29,John@@test,2023-12-21,63.26,,good
+619, Karan ,twenty, Karan @test,2023-10-02,NaN,unknown,
+620,,,user@mail,2023-12-15,60.78,inactive,good
+621,Jane,40,Jane@example.com,2023-12-05,,active,duplicate?
+622,Ali,19,Ali@mail.com,2023-04-07,,,bad data
+623, Priya ,NaN, Priya @@example.com,2023-01-13,,active,good
+624,,,user@mail,2023-10-30,88.95,,
+625,Jane,,Jane@mail,2023-06-05,,active,bad data
+626,Neha,31,Neha@test,2023-11-10,93.44,,
+627,Ravi,twenty,Ravi@mail.com,2023-06-27,,active,duplicate?
+628,John,twenty,John@test,2023-09-14,,active,ok
+629, Ali ,twenty, Ali @mail,2023-10-09,65.73,active,ok
+630,Karan,NaN,Karan@@example.com,2023-02-12,NaN,unknown,good
+631,,26,user@mail.com,2023-01-05,,,duplicate?
+632,Sneha,twenty,Sneha@mail,not_a_date,62.42,inactive,ok
+633,Sneha,,Sneha@mail.com,2023-04-09,NaN,inactive,bad data
+634,Amit,,,2023-05-17,,,
+635,Jane,NaN,Jane@mail,2023-01-01,86.38,inactive,bad data
+636,Priya,,Priya@test,2023-04-19,90.85,unknown,ok
+637,Simran,twenty,Simran@mail.com,not_a_date,NaN,inactive,bad data
+638,Sneha,NaN,Sneha@example.com,2024-01-08,89.81,active,good
+639, Karan ,, Karan @mail.com,2023-05-07,,,duplicate?
+640,Rahul,28,Rahul@example.com,2023-05-30,,unknown,duplicate?
+641,John,,John@@mail.com,2023-10-08,,,ok
+642,Amit,24,Amit@example.com,2023-01-23,64.94,active,duplicate?
+643,Ravi,,Ravi@mail.com,not_a_date,79.53,unknown,
+644,,23,user@mail,2024-01-13,,,ok
+645,Sneha,twenty,Sneha@@test,2023-12-29,86.23,,
+646,Simran,twenty,,not_a_date,NaN,inactive,
+647,Ravi,27,Ravi@@test,2023-12-03,,active,duplicate?
+648,Rahul,NaN,Rahul@test,not_a_date,,active,
+649,Sneha,NaN,Sneha@@mail,2023-04-01,,,ok
+650,John,,John@mail.com,2024-01-03,65.24,unknown,bad data
+651,Neha,23,Neha@mail.com,2023-09-19,,active,duplicate?
+652,Karan,NaN,Karan@test,2024-01-01,75.01,inactive,good
+653,Neha,19,Neha@example.com,2023-09-14,NaN,unknown,ok
+654,Neha,twenty,Neha@mail,2023-03-23,89.54,active,good
+655,Karan,NaN,Karan@mail,2023-11-12,NaN,active,good
+656,,NaN,user@mail.com,2023-09-25,70.66,,duplicate?
+657, Jane ,NaN, Jane @mail,2023-12-21,85.44,,
+658,Amit,37,Amit@@test,2023-05-30,83.07,,good
+659,Jane,35,Jane@test,2023-05-02,,unknown,
+660,John,,John@@mail.com,2023-02-24,90.9,unknown,bad data
+661,Sneha,twenty,Sneha@mail.com,2023-09-24,,,bad data
+662,Neha,27,Neha@mail.com,not_a_date,94.02,inactive,
+663,Simran,twenty,Simran@@mail,2023-05-05,NaN,active,bad data
+664,Ravi,NaN,Ravi@@mail,2023-09-28,73.2,inactive,bad data
+665,Priya,,Priya@test,2023-09-26,,active,ok
+666,Simran,,Simran@@mail,2023-05-28,,inactive,good
+667, Simran ,NaN,,2023-06-01,79.35,active,
+668,John,twenty,John@test,2023-08-31,81.44,inactive,ok
+669,John,twenty,John@example.com,2023-11-17,,unknown,ok
+670,Rahul,twenty,,2023-07-31,89.15,,bad data
+671,Simran,,Simran@mail.com,not_a_date,NaN,active,duplicate?
+672,Ravi,NaN,Ravi@test,2023-12-10,,,bad data
+673,Ali,twenty,,2024-01-22,82.67,,bad data
+674,Jane,,Jane@@mail,2023-01-11,,unknown,good
+675,John,21,John@test,2023-02-21,NaN,active,ok
+676,Ravi,NaN,Ravi@mail.com,2024-01-30,,active,good
+677,Sneha,twenty,Sneha@@test,2023-01-27,80.45,inactive,ok
+678,Jane,twenty,Jane@mail,2023-10-05,60.7,inactive,good
+679,Neha,twenty,Neha@mail,2024-02-01,NaN,unknown,good
+680,John,twenty,John@example.com,2023-09-12,66.07,inactive,good
+681,John,twenty,,2023-03-11,NaN,unknown,good
+682,Neha,,Neha@mail,2023-06-05,68.4,unknown,duplicate?
+683,John,,John@@example.com,2023-06-16,NaN,inactive,
+684, Jane ,, Jane @mail.com,2024-01-24,,inactive,
+685,John,twenty,John@example.com,2023-07-16,NaN,,ok
+686,Priya,twenty,,not_a_date,NaN,,
+687,Neha,twenty,,2024-01-22,NaN,unknown,good
+688,Priya,twenty,Priya@test,2023-01-21,65.33,unknown,ok
+689,Sneha,twenty,Sneha@@test,2023-01-16,,,duplicate?
+690,Rahul,NaN,Rahul@@mail.com,2023-01-19,83.84,unknown,
+691,Priya,NaN,Priya@test,2023-08-16,NaN,active,duplicate?
+692,Amit,NaN,Amit@@example.com,2023-01-15,99.74,active,duplicate?
+693,Jane,twenty,Jane@mail,2023-10-06,94.49,,ok
+694,Jane,,Jane@test,2023-03-04,NaN,inactive,good
+695,,21,,2023-12-12,,unknown,
+696,Sneha,32,Sneha@mail,2023-11-16,NaN,,
+697,Amit,twenty,,2023-09-27,70.36,,
+698,,NaN,user@mail,2023-05-30,,inactive,ok
+699,John,twenty,John@mail,2023-10-19,NaN,active,
+700,Priya,,Priya@test,2023-08-22,,,good
+701,Rahul,36,Rahul@example.com,2023-11-12,97.61,unknown,duplicate?
+702,Neha,21,Neha@@test,2023-02-26,NaN,active,ok
+703,Jane,,Jane@example.com,2023-06-08,,inactive,bad data
+704,Rahul,,Rahul@@mail.com,2023-12-17,NaN,,good
+705,Ali,,Ali@test,2023-07-19,88.14,,bad data
+706,Priya,,Priya@mail,2023-10-23,NaN,active,ok
+707,Ali,25,Ali@example.com,2023-07-12,NaN,inactive,bad data
+708,Ravi,28,Ravi@test,2023-04-28,,unknown,ok
+709,Jane,,Jane@@example.com,2024-01-12,NaN,,bad data
+710,Simran,,Simran@mail.com,2023-01-24,NaN,active,good
+711,,NaN,user@example.com,2023-07-24,NaN,active,
+712,Ali,21,Ali@example.com,2023-04-25,NaN,,duplicate?
+713,Karan,34,Karan@mail.com,2023-04-12,,,bad data
+714,Jane,twenty,Jane@example.com,2023-05-30,NaN,active,bad data
+715,Amit,NaN,Amit@example.com,2024-01-04,66.28,,duplicate?
+716,Simran,NaN,Simran@mail,2023-05-01,NaN,inactive,duplicate?
+717,Amit,twenty,Amit@test,2023-01-24,90.82,unknown,ok
+718,Simran,,Simran@mail,2023-07-27,NaN,unknown,duplicate?
+719,Jane,28,Jane@example.com,2023-06-21,,active,bad data
+720,,NaN,user@example.com,2023-10-27,75.12,active,ok
+721,Ravi,twenty,Ravi@example.com,2023-09-21,,,duplicate?
+722,Simran,twenty,,2023-08-12,,unknown,duplicate?
+723,Simran,18,Simran@@test,2024-01-13,NaN,inactive,
+724,Ravi,,Ravi@@test,2023-07-16,63.55,inactive,duplicate?
+725,Priya,twenty,Priya@@example.com,not_a_date,NaN,,
+726,Karan,,Karan@mail.com,2023-08-08,NaN,unknown,
+727,Priya,,Priya@test,2023-04-10,NaN,unknown,ok
+728,Ravi,NaN,Ravi@test,2023-12-22,76.31,,good
+729,Priya,28,Priya@example.com,not_a_date,,inactive,
+730,Ravi,twenty,Ravi@example.com,2023-04-02,92.76,inactive,ok
+731,John,,John@mail.com,2023-05-05,,unknown,
+732, Rahul ,twenty,,2024-01-08,86.11,inactive,duplicate?
+733,Neha,twenty,Neha@test,2023-07-07,,inactive,bad data
+734,Rahul,34,Rahul@mail,2023-01-08,,inactive,duplicate?
+735,Neha,twenty,Neha@test,not_a_date,,inactive,good
+736,John,twenty,John@mail,2024-01-18,90.94,unknown,good
+737,Sneha,20,Sneha@mail,2023-12-10,NaN,active,duplicate?
+738,Karan,25,,2024-01-26,NaN,inactive,ok
+739,Rahul,30,Rahul@test,2023-06-03,87.66,active,
+740,Ali,,Ali@mail,2023-08-04,NaN,,
+741,Amit,,Amit@mail.com,2023-12-13,NaN,unknown,
+742,,25,,2023-10-25,NaN,inactive,bad data
+743,,twenty,user@mail,not_a_date,68.64,inactive,
+744,Priya,twenty,Priya@example.com,not_a_date,61.94,inactive,ok
+745,Rahul,NaN,Rahul@@mail,2023-10-16,94.49,active,ok
+746,John,37,John@mail,2023-10-17,80.22,inactive,bad data
+747,Amit,NaN,Amit@test,2023-04-20,,unknown,
+748,Ali,NaN,Ali@example.com,2023-04-16,NaN,active,duplicate?
+749,Jane,twenty,Jane@example.com,2023-05-19,87.73,active,bad data
+750,Amit,twenty,Amit@mail.com,2023-02-14,,inactive,bad data
+751,Jane,twenty,,2023-09-03,,unknown,duplicate?
+752,Karan,twenty,,2023-06-20,94.27,active,
+753,Amit,NaN,Amit@test,2023-07-09,,active,bad data
+754,Amit,,Amit@test,2023-04-26,NaN,,bad data
+755,,twenty,user@mail,not_a_date,NaN,inactive,
+756,John,NaN,John@example.com,not_a_date,NaN,unknown,good
+757,Simran,,,2023-08-05,NaN,,
+758,Simran,,,not_a_date,NaN,inactive,bad data
+759,Priya,twenty,Priya@mail,2024-01-23,NaN,unknown,
+760,Sneha,,Sneha@test,2023-09-27,99.69,unknown,bad data
+761,Jane,18,Jane@mail,2023-12-10,,,
+762,Sneha,twenty,,2023-02-13,,active,ok
+763,,,user@example.com,2023-06-08,82.78,,bad data
+764,Rahul,NaN,Rahul@mail.com,2023-01-11,NaN,inactive,good
+765,Simran,,Simran@test,2023-01-02,,,bad data
+766,Ravi,,Ravi@mail,2024-02-02,NaN,,
+767,Ravi,26,Ravi@mail,not_a_date,NaN,inactive,ok
+768,Priya,27,Priya@mail.com,2023-08-29,,,
+769,John,31,John@@mail,2023-03-14,NaN,,good
+770,Neha,23,,2023-01-03,NaN,unknown,ok
+771,Rahul,twenty,Rahul@@mail.com,2023-05-21,,inactive,duplicate?
+772,Sneha,31,Sneha@example.com,not_a_date,NaN,inactive,good
+773, Ali ,, Ali @example.com,2023-07-10,76.18,inactive,good
+774,Neha,twenty,Neha@mail,2023-09-17,71.67,active,
+775, Simran ,NaN, Simran @@example.com,2023-07-19,,,bad data
+776,Karan,NaN,Karan@@test,2023-07-24,NaN,unknown,ok
+777,Ali,NaN,Ali@example.com,2023-12-05,NaN,unknown,good
+778,Simran,twenty,Simran@mail.com,2023-01-04,,,good
+779,John,twenty,John@example.com,2023-01-15,NaN,active,good
+780,Amit,,Amit@test,2023-05-05,NaN,inactive,good
+781,Jane,,Jane@mail.com,2023-06-30,74.52,unknown,duplicate?
+782,Rahul,NaN,Rahul@test,2023-03-06,,inactive,duplicate?
+783,Amit,NaN,Amit@mail.com,not_a_date,76.77,unknown,bad data
+784,Karan,twenty,Karan@mail,not_a_date,,,bad data
+785,Neha,,Neha@example.com,2023-07-04,,,duplicate?
+786,Ravi,NaN,Ravi@mail,2023-10-20,NaN,unknown,
+787,Ali,39,Ali@mail,2023-03-11,97.07,inactive,bad data
+788,Priya,,Priya@mail.com,2023-10-29,NaN,inactive,ok
+789,Neha,twenty,Neha@mail,2023-11-17,75.03,inactive,
+790,Karan,twenty,Karan@@test,2023-08-28,,,bad data
+791,Neha,38,Neha@example.com,2023-01-05,65.39,,duplicate?
+792,Rahul,twenty,,not_a_date,NaN,,duplicate?
+793,Neha,NaN,Neha@example.com,2023-12-11,,,ok
+794,Neha,twenty,Neha@test,2023-01-26,,,bad data
+795,Priya,,Priya@test,2023-06-18,NaN,active,duplicate?
+796,Ravi,NaN,Ravi@example.com,2023-05-05,65.16,inactive,bad data
+797,Ali,NaN,Ali@mail,2023-10-19,,inactive,duplicate?
+798,Neha,NaN,Neha@mail.com,2023-05-05,,unknown,ok
+799,Amit,,Amit@mail,2023-03-18,,unknown,duplicate?
+800,Simran,twenty,Simran@example.com,2023-06-26,88.31,inactive,ok
+801,Jane,twenty,,2023-03-28,74.01,unknown,good
+802,Neha,30,Neha@mail.com,2023-05-23,,unknown,
+803, Neha ,twenty, Neha @test,2023-01-20,63.77,inactive,ok
+804,Rahul,twenty,,2023-04-13,NaN,inactive,duplicate?
+805,Jane,twenty,Jane@mail.com,2023-10-03,NaN,inactive,
+806,Ali,twenty,Ali@example.com,2023-09-15,NaN,,
+807,Karan,NaN,Karan@mail,2023-05-12,NaN,unknown,
+808,Jane,twenty,Jane@mail,2023-05-18,,inactive,ok
+809,Amit,NaN,Amit@mail,2024-01-17,62.76,inactive,ok
+810,Priya,NaN,Priya@mail,2023-04-30,87.43,,bad data
+811,Karan,,Karan@@mail,2023-08-25,NaN,active,
+812,Simran,NaN,,2023-07-11,NaN,unknown,ok
+813,Rahul,34,Rahul@mail,2023-03-20,,active,
+814,Jane,,Jane@@example.com,2023-10-30,86.77,unknown,bad data
+815, Sneha ,20,,2023-10-03,,,good
+816,Rahul,,Rahul@@mail,2023-02-02,NaN,,duplicate?
+817,Sneha,NaN,Sneha@mail,2023-07-24,NaN,,ok
+818,Simran,twenty,Simran@mail,2023-12-07,NaN,unknown,bad data
+819,Amit,twenty,Amit@example.com,2023-07-06,,unknown,bad data
+820,Neha,NaN,Neha@mail,not_a_date,NaN,active,good
+821,Jane,20,,2023-10-27,,,good
+822,Priya,,Priya@mail.com,2023-04-29,68.26,,
+823,Rahul,22,Rahul@example.com,not_a_date,70.84,active,ok
+824,Priya,twenty,Priya@test,2023-05-22,NaN,active,good
+825,Karan,NaN,Karan@@mail.com,2023-09-15,,unknown,bad data
+826,Priya,,,2023-10-07,,,good
+827,Neha,NaN,Neha@mail,2023-03-26,88.36,inactive,good
+828,Rahul,twenty,Rahul@@mail,not_a_date,,,
+829,Ravi,twenty,Ravi@mail.com,2023-01-09,77.98,inactive,bad data
+830, Rahul ,twenty, Rahul @@example.com,2023-12-31,,active,good
+831,Ravi,35,Ravi@mail.com,2024-01-19,NaN,,ok
+832,Ali,twenty,Ali@mail,2023-12-17,,unknown,ok
+833,Rahul,NaN,Rahul@test,2023-07-19,,,duplicate?
+834,Jane,18,,2023-10-02,,unknown,bad data
+835,Neha,twenty,Neha@example.com,2023-07-01,80.49,unknown,ok
+836, Simran ,, Simran @mail.com,2023-10-24,NaN,inactive,bad data
+837,Ali,,Ali@test,2023-09-10,NaN,,ok
+838,Ali,twenty,Ali@mail,2024-01-08,79.23,unknown,
+839,Amit,,Amit@mail,2023-08-22,79.29,,ok
+840,Jane,NaN,Jane@example.com,2023-02-27,NaN,inactive,ok
+841,Ravi,twenty,Ravi@example.com,2023-07-04,NaN,inactive,good
+842,Rahul,NaN,Rahul@@example.com,2023-04-24,,,
+843, Karan ,NaN, Karan @example.com,2023-07-10,83.42,inactive,duplicate?
+844, Rahul ,twenty, Rahul @test,2023-03-07,60.21,,good
+845,Jane,37,,2023-03-25,94.54,,ok
+846,Neha,36,,2023-03-05,NaN,,
+847, Sneha ,,,2023-07-07,86.53,,duplicate?
+848,Simran,twenty,Simran@@example.com,2023-05-08,77.92,active,duplicate?
+849,Jane,twenty,Jane@test,2023-07-12,NaN,inactive,duplicate?
+850,Amit,twenty,Amit@example.com,2023-04-30,95.68,active,ok
+851,Jane,25,Jane@mail.com,2023-11-04,,active,bad data
+852,Karan,NaN,Karan@mail.com,2023-05-18,69.8,unknown,ok
+853,Karan,NaN,Karan@mail,2023-12-17,NaN,unknown,bad data
+854,Neha,twenty,Neha@example.com,2024-01-25,88.7,inactive,ok
+855,Ravi,NaN,Ravi@mail.com,not_a_date,,inactive,ok
+856,Amit,40,Amit@mail,2024-01-22,,inactive,
+857,Sneha,32,Sneha@@test,2023-09-13,NaN,,
+858,Priya,23,Priya@mail.com,2023-10-06,87.69,inactive,
+859,,,user@@example.com,2023-02-22,69.32,,good
+860,Karan,,,2023-04-15,82.33,unknown,good
+861,Rahul,twenty,,2023-04-09,NaN,,good
+862,Neha,NaN,Neha@example.com,not_a_date,,,
+863,Karan,36,Karan@example.com,2023-06-02,NaN,active,duplicate?
+864,Rahul,NaN,Rahul@test,2023-04-01,76.28,active,bad data
+865,Simran,twenty,Simran@test,2023-04-18,95.44,inactive,duplicate?
+866,Simran,30,Simran@@mail,2023-01-23,NaN,,duplicate?
+867,Sneha,21,Sneha@@mail.com,not_a_date,70.2,inactive,bad data
+868,,twenty,user@mail,2023-09-10,NaN,inactive,bad data
+869, Rahul ,, Rahul @@test,2024-02-01,,inactive,bad data
+870,Ali,NaN,Ali@mail.com,not_a_date,NaN,,duplicate?
+871,Neha,31,Neha@example.com,2023-02-23,65.49,,duplicate?
+872,Amit,,Amit@mail,2023-11-16,NaN,unknown,
+873,Jane,,Jane@example.com,2023-12-29,80.62,unknown,
+874,John,twenty,John@mail,2024-01-06,NaN,unknown,good
+875,Ali,NaN,Ali@@mail,2023-01-23,70.6,,good
+876,Simran,38,Simran@@test,2023-06-18,,active,duplicate?
+877,Ravi,NaN,Ravi@test,not_a_date,NaN,unknown,bad data
+878, Karan ,,,2023-04-16,95.88,unknown,good
+879,Rahul,,Rahul@mail,2023-07-11,98.41,unknown,bad data
+880,Rahul,twenty,Rahul@test,2023-07-25,NaN,active,bad data
+881,Ravi,27,Ravi@@test,2023-09-25,,active,
+882,Ali,twenty,Ali@mail.com,2023-04-13,72.79,unknown,ok
+883,Amit,twenty,Amit@@test,2023-05-17,72.44,,duplicate?
+884,Rahul,,,2023-07-22,,,
+885,John,,John@test,2024-01-26,66.14,,good
+886,Jane,NaN,Jane@test,2023-10-29,,active,
+887,Simran,NaN,Simran@mail.com,2023-07-01,NaN,unknown,bad data
+888,Simran,,Simran@@example.com,2023-05-26,,active,
+889,Karan,,Karan@mail.com,2023-04-28,92.8,,duplicate?
+890,Jane,,,2023-12-03,NaN,inactive,good
+891,Ravi,twenty,Ravi@mail,not_a_date,NaN,inactive,
+892, Simran ,23, Simran @test,2023-04-09,,unknown,duplicate?
+893,John,,,2023-10-06,NaN,inactive,duplicate?
+894,Ali,twenty,Ali@mail.com,2023-02-15,65.06,,bad data
+895,Ravi,twenty,Ravi@@mail.com,not_a_date,,unknown,duplicate?
+896, Sneha ,, Sneha @mail.com,2023-03-29,,,good
+897,Rahul,40,Rahul@mail.com,2023-03-08,73.29,unknown,good
+898,Ali,NaN,Ali@example.com,2023-03-31,66.5,unknown,
+899,John,NaN,John@@example.com,2023-07-16,91.23,inactive,ok
+900,Priya,twenty,Priya@mail.com,2023-07-16,NaN,active,good
+901,Simran,,Simran@@example.com,2023-08-02,67.0,,ok
+902,Priya,,Priya@mail.com,not_a_date,,unknown,bad data
+903,Karan,NaN,,2023-05-17,NaN,,bad data
+904,Karan,40,Karan@mail,2024-01-02,78.1,,duplicate?
+905,Priya,33,Priya@mail,2023-06-01,,,good
+906,Karan,NaN,Karan@test,2023-04-23,,active,
+907,Priya,19,Priya@test,2023-03-31,,active,
+908,Karan,twenty,Karan@mail.com,2023-04-01,88.78,unknown,bad data
+909,Ali,twenty,,2023-04-02,96.93,active,duplicate?
+910,Rahul,,Rahul@mail,2023-06-01,NaN,inactive,good
+911,Priya,18,Priya@mail,not_a_date,70.2,inactive,duplicate?
+912,Simran,NaN,Simran@mail.com,2023-03-26,60.12,unknown,good
+913,Karan,NaN,Karan@@test,2023-09-19,,unknown,good
+914, Karan ,twenty, Karan @mail,2023-08-05,94.54,,good
+915,Amit,32,Amit@@mail,2023-10-28,78.02,,bad data
+916,John,twenty,John@mail.com,not_a_date,,inactive,
+917,John,twenty,John@test,2023-09-23,NaN,,bad data
+918,Ali,NaN,Ali@example.com,2023-04-10,NaN,unknown,bad data
+919,Rahul,,Rahul@mail,2023-01-01,,,bad data
+920,Karan,twenty,Karan@test,not_a_date,NaN,,duplicate?
+921,John,twenty,John@test,2023-09-10,,inactive,ok
+922,Simran,NaN,,2023-02-24,NaN,active,good
+923,Simran,37,Simran@example.com,2023-10-12,74.88,inactive,good
+924,Priya,NaN,Priya@mail,2023-12-05,NaN,unknown,duplicate?
+925,Priya,NaN,Priya@mail,2023-02-03,,,good
+926,Ali,,Ali@example.com,2023-01-07,73.13,inactive,bad data
+927,Ravi,twenty,,2023-01-09,NaN,unknown,ok
+928,Jane,NaN,Jane@test,2023-07-24,,,good
+929,Sneha,,Sneha@example.com,2023-05-04,NaN,inactive,good
+930,Neha,twenty,Neha@test,2024-01-31,NaN,unknown,good
+931, Simran ,twenty, Simran @mail.com,2023-05-08,97.55,unknown,bad data
+932,Rahul,NaN,Rahul@@mail.com,not_a_date,NaN,,ok
+933,Simran,NaN,Simran@test,2023-03-28,NaN,,
+934,Priya,twenty,Priya@example.com,2023-12-22,NaN,active,duplicate?
+935,Jane,twenty,Jane@mail,2023-10-20,,inactive,duplicate?
+936,Karan,,Karan@example.com,2023-06-15,61.33,inactive,duplicate?
+937,Ali,NaN,Ali@test,2024-01-11,92.77,unknown,duplicate?
+938,Sneha,NaN,Sneha@test,2023-04-06,,,duplicate?
+939,Priya,NaN,Priya@@mail.com,2023-05-16,83.28,unknown,ok
+940,Karan,,Karan@test,2023-11-20,87.64,,good
+941,Neha,NaN,Neha@example.com,2023-06-20,,inactive,good
+942,Rahul,twenty,Rahul@mail.com,2023-09-27,,active,duplicate?
+943,Jane,,Jane@mail.com,2023-04-02,,inactive,duplicate?
+944,John,,John@@test,not_a_date,61.16,active,bad data
+945,Neha,NaN,,2023-12-17,,,
+946,Neha,twenty,Neha@example.com,2023-11-10,73.9,inactive,
+947,Sneha,,Sneha@@test,2023-04-18,,inactive,bad data
+948,Jane,,Jane@mail.com,2023-09-12,73.69,,bad data
+949,Karan,,Karan@mail,2023-02-06,,active,good
+950,Karan,NaN,Karan@example.com,2023-07-09,NaN,unknown,good
+951,John,30,John@test,2023-08-10,,unknown,good
+952,Ali,,Ali@mail.com,2023-12-05,69.35,,good
+953,Rahul,twenty,Rahul@mail.com,2024-01-20,,unknown,good
+954,Sneha,NaN,,2023-11-28,NaN,active,
+955,Sneha,NaN,Sneha@test,2023-05-06,67.32,active,
+956,Amit,35,Amit@mail.com,2023-12-29,,,ok
+957,Amit,NaN,Amit@test,2023-01-09,NaN,unknown,duplicate?
+958,Amit,twenty,Amit@test,2023-08-02,,active,bad data
+959,Karan,NaN,Karan@@mail.com,2023-03-10,NaN,,good
+960,Priya,34,,not_a_date,96.91,,ok
+961,Neha,NaN,Neha@test,2023-07-31,89.6,unknown,bad data
+962,Simran,NaN,,2023-06-15,69.33,active,bad data
+963,Amit,,Amit@mail.com,2023-05-10,,,duplicate?
+964,Neha,,Neha@@example.com,2023-02-06,,,
+965,Ravi,twenty,Ravi@example.com,2023-11-27,,inactive,good
+966, Ravi ,NaN, Ravi @example.com,2023-02-17,NaN,inactive,bad data
+967,Priya,26,Priya@@test,2023-05-25,,,duplicate?
+968,Neha,,Neha@test,2024-01-20,,unknown,
+969,Rahul,twenty,Rahul@mail.com,2023-01-22,87.31,unknown,ok
+970,Ravi,twenty,Ravi@@example.com,2023-08-26,NaN,inactive,bad data
+971,Simran,twenty,Simran@mail,2023-10-08,,unknown,ok
+972,Sneha,twenty,,not_a_date,66.56,inactive,good
+973,Simran,twenty,Simran@mail.com,2023-12-30,NaN,active,bad data
+974,Ali,,Ali@test,2023-05-30,NaN,unknown,good
+975,John,twenty,John@mail.com,2023-10-01,76.92,,good
+976,Ravi,29,Ravi@test,2023-01-14,,,
+977,Neha,twenty,,2023-05-23,NaN,,good
+978, Priya ,twenty, Priya @mail.com,2023-02-19,,inactive,ok
+979,Amit,NaN,Amit@mail.com,2024-01-06,78.12,inactive,ok
+980,Rahul,twenty,Rahul@mail.com,2023-11-29,68.57,,
+981,Priya,twenty,Priya@example.com,2023-09-11,NaN,,ok
+982,Jane,20,Jane@@example.com,2023-11-08,NaN,,bad data
+983,Sneha,39,Sneha@mail.com,2023-09-09,,active,ok
+984, John ,NaN, John @@example.com,2023-11-11,,inactive,
+985,Ali,,Ali@example.com,2023-07-22,,inactive,
+986,John,,,2023-05-11,,,
+987,Amit,,Amit@example.com,2023-01-21,67.73,active,ok
+988,Amit,32,Amit@mail.com,2023-12-01,,unknown,bad data
+989,Amit,,Amit@test,2023-03-20,88.2,active,ok
+990, Sneha ,37, Sneha @mail.com,2023-05-31,96.29,unknown,ok
+991,Karan,,Karan@example.com,2023-10-25,NaN,inactive,
+992, John ,, John @mail,2023-03-19,60.06,unknown,good
+993, Priya ,twenty, Priya @example.com,2023-07-12,,,good
+994,Amit,twenty,Amit@mail.com,2024-01-01,NaN,inactive,ok
+995,Jane,,Jane@@mail.com,2023-09-24,,,good
+996,Simran,NaN,Simran@mail,2023-12-01,NaN,unknown,
+997,Neha,,Neha@mail.com,2024-01-07,,active,
+998,,29,user@test,2023-12-21,66.6,unknown,ok
+999,Jane,NaN,Jane@example.com,2023-02-28,98.52,,duplicate?
+1000,Ali,40,Ali@@test,not_a_date,91.07,,good
