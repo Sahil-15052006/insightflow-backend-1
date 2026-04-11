@@ -4,8 +4,9 @@ const multer = require("multer");
 const csv = require("csv-parser");
 const xlsx = require("xlsx");
 const { Readable } =  require('stream')
-const {cleanJSONData} = require('../utils/dataCleaner')
+const DataCleaner = require('../utils/DataCleaner')
 const SchemaDetector = require('../utils/SchemaDetector')
+const DataTypeConverter = require('../utils/DataTypeConverter')
 const fs = require('fs')
 
 const storage = multer.diskStorage({
@@ -34,6 +35,10 @@ router.post("/upload", upload.single('file'), (req, res) => {
         .on("data", (data) => results.push(data))
         .on("end", () => {
           const schema = SchemaDetector(results)
+          const convertedData = results.map((row)=>{
+            DataTypeConverter(row,schema)
+          })
+          const cleanedData = DataCleaner(convertedData,schema)
           res.json({ cleanedData });
         });
 
