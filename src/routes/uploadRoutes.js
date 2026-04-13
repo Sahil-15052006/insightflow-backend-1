@@ -3,11 +3,12 @@ const router = express.Router();
 const multer = require("multer");
 const csv = require("csv-parser");
 const xlsx = require("xlsx");
-const { Readable } =  require('stream')
-const DataCleaner = require('../utils/DataCleaner')
-const SchemaDetector = require('../utils/SchemaDetector')
-const DataTypeConverter = require('../utils/DataTypeConverter')
-const fs = require('fs')
+const fs = require("fs");
+
+const DataCleaner = require('../utils/DataCleaner');
+const SchemaDetector = require('../utils/SchemaDetector');
+const DataTypeConverter = require('../utils/DataTypeConverter');
+const DataValidator = require('../utils/DataValidater');
 
 const storage = multer.diskStorage({
   destination: "uploads/",
@@ -19,11 +20,13 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.post("/upload", upload.single('file'), (req, res) => {
-  try{
 
+  try {
     const file = req.file;
 
-    if (!file) return res.json({ message: "file not uploaded" });
+    if (!file) {
+      return res.status(400).json({ message: "file not uploaded" });
+    }
 
     if (file.mimetype === "text/csv" || file.originalname.endsWith('.csv')) {
 
@@ -32,14 +35,9 @@ router.post("/upload", upload.single('file'), (req, res) => {
 
       stream
         .pipe(csv())
-        .on("data", (data) => results.push(data))
+        .on("data", (row) => results.push(row))
         .on("end", () => {
-          const schema = SchemaDetector(results)
-          const convertedData = results.map((row)=>{
-            DataTypeConverter(row,schema)
-          })
-          const cleanedData = DataCleaner(convertedData,schema)
-          res.json({ cleanedData });
+          processData(results, res);
         });
 
     } else {
@@ -48,26 +46,33 @@ router.post("/upload", upload.single('file'), (req, res) => {
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
       const data = xlsx.utils.sheet_to_json(sheet);
 
-      const cleanedData = cleanJSONData(data, {
-        forceStringFields: ["phone"],
-        forceNumberFields: ["age", "price"],
-        requiredFields: ["name", "email"],
-        removeEmptyRows: true
-      });
-
-      res.json({ cleanedData });
-
+      processData(data, res);
     }
 
-  }catch(err){
-
+  } catch (err) {
     res.status(500).json({
-      message:"failed to upload file",
-      error:err.message,
-    })
-
+      message: "failed to upload file",
+      error: err.message,
+    });
   }
-  
 });
 
-module.exports=router
+function processData(data, res) {
+
+  const schema = SchemaDetector(data);
+  const convertedData = data.map((row) => {
+    return DataTypeConverter(row, schema);
+  });
+
+  const cleanedData = DataCleaner(convertedData, schema);
+  const validation = DataValidator(cleanedData, schema);
+
+  res.json({
+    success: true,
+    schema: schema,
+    data: cleanedData,
+    validation: validation
+  });
+}
+
+module.exports = router;

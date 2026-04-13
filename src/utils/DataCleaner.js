@@ -1,17 +1,40 @@
-export default function DataCleaner(data, schema) {
+function DataCleaner(data, schema) {
 
     const columnStats = {};
 
+    // -------- STEP 1: calculate stats --------
     for (let key in schema) {
 
         const type = schema[key];
         let values = [];
 
-        // collect values
         for (let i = 0; i < data.length; i++) {
+
             let value = data[i][key];
 
-            if (value !== null && value !== undefined) {
+            if (value === null || value === undefined || value === "") {
+                continue;
+            }
+
+            if (type === "number") {
+                if (!isNaN(value)) {
+                    values.push(Number(value));
+                }
+            }
+
+            else if (type === "boolean") {
+                if (value === true || value === false || value === "true" || value === "false") {
+                    values.push(value);
+                }
+            }
+
+            else if (type === "email") {
+                if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                    values.push(value);
+                }
+            }
+
+            else {
                 values.push(value);
             }
         }
@@ -36,20 +59,17 @@ export default function DataCleaner(data, schema) {
             }
         }
 
-        else {
+        else if (type === "string" || type === "boolean") {
 
             let freq = {};
             let max = 0;
             let mode = null;
 
             for (let i = 0; i < values.length; i++) {
+
                 let val = values[i];
 
-                if (freq[val] === undefined) {
-                    freq[val] = 1;
-                } else {
-                    freq[val] = freq[val] + 1;
-                }
+                freq[val] = (freq[val] || 0) + 1;
 
                 if (freq[val] > max) {
                     max = freq[val];
@@ -61,21 +81,56 @@ export default function DataCleaner(data, schema) {
         }
     }
 
+    // -------- STEP 2: clean row --------
     let cleanedData = [];
 
     for (let i = 0; i < data.length; i++) {
 
-        let row = data[i];
         let newRow = {};
 
         for (let key in schema) {
 
-            let value = row[key];
+            let value = data[i][key];
+            let type = schema[key];
 
-            if (value === null || value === undefined) {
-                newRow[key] = columnStats[key];
-            } else {
-                newRow[key] = value;
+            if (type === "number") {
+
+                if (value === null || value === "" || isNaN(value)) {
+                    newRow[key] = columnStats[key];
+                } else {
+                    newRow[key] = Number(value);
+                }
+            }
+
+            else if (type === "boolean") {
+
+                if (value === true || value === false) {
+                    newRow[key] = value;
+                } else if (value === "true") {
+                    newRow[key] = true;
+                } else if (value === "false") {
+                    newRow[key] = false;
+                } else {
+                    newRow[key] = columnStats[key];
+                }
+            }
+
+            else if (type === "email") {
+
+                if (value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                    newRow[key] = value;
+                } else {
+                    newRow[key] = null;
+                }
+            }
+
+            else {
+
+                if (value === null || value === "") {
+                    newRow[key] = columnStats[key];
+                } else {
+                    newRow[key] = value;
+                }
             }
         }
 
@@ -84,3 +139,5 @@ export default function DataCleaner(data, schema) {
 
     return cleanedData;
 }
+
+module.exports = DataCleaner;

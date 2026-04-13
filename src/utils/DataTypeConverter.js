@@ -1,4 +1,4 @@
-export default function DataTypeConverter(row, schema) {
+function DataTypeConverter(row, schema) {
 
     const newRow = {}
 
@@ -44,3 +44,5 @@ export default function DataTypeConverter(row, schema) {
 
     return newRow
 }
+
+module.exports = DataTypeConverter;

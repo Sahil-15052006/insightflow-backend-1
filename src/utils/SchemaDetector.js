@@ -1,4 +1,4 @@
-export default function SchemaDetector(data) {
+function SchemaDetector(data) {
 
     const dataSchema = {}
 
@@ -6,7 +6,7 @@ export default function SchemaDetector(data) {
         return dataSchema
     }
 
-    const sampleSize = Math.min(20, data.length)
+    const sampleSize = Math.min(50, data.length)
     const sampleData = data.slice(0, sampleSize)
 
     const columns = Object.keys(sampleData[0])
@@ -20,6 +20,7 @@ export default function SchemaDetector(data) {
         let booleanCount = 0
         let emailCount = 0
         let dateCount = 0
+        let totalValid = 0
 
         for (let j = 0; j < sampleData.length; j++) {
 
@@ -29,24 +30,22 @@ export default function SchemaDetector(data) {
                 continue
             }
 
+            totalValid++
+
             value = String(value).trim().toLowerCase()
 
-            // BOOLEAN (check early)
             if (value === "true" || value === "false") {
                 booleanCount++
             }
 
-            // EMAIL (basic pattern)
             else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
                 emailCount++
             }
 
-            // NUMBER (strict check)
-            else if (!isNaN(value) && value !== "") {
+            else if (!isNaN(value)) {
                 numberCount++
             }
 
-            // DATE (valid parse)
             else if (!isNaN(Date.parse(value))) {
                 dateCount++
             }
@@ -56,28 +55,23 @@ export default function SchemaDetector(data) {
             }
         }
 
-        // Determine type based on max count
         let detectedType = "string"
-        let maxCount = stringCount
 
-        if (numberCount > maxCount) {
+        // use threshold logic instead of max
+        if (numberCount / totalValid > 0.3) {
             detectedType = "number"
-            maxCount = numberCount
         }
 
-        if (emailCount > maxCount) {
-            detectedType = "email"
-            maxCount = emailCount
-        }
-
-        if (booleanCount > maxCount) {
+        else if (booleanCount / totalValid > 0.8) {
             detectedType = "boolean"
-            maxCount = booleanCount
         }
 
-        if (dateCount > maxCount) {
+        else if (emailCount / totalValid > 0.5) {
+            detectedType = "email"
+        }
+
+        else if (dateCount / totalValid > 0.5) {
             detectedType = "date"
-            maxCount = dateCount
         }
 
         dataSchema[columnName] = detectedType
@@ -85,3 +79,5 @@ export default function SchemaDetector(data) {
 
     return dataSchema
 }
+
+module.exports = SchemaDetector;
