@@ -9,7 +9,7 @@ const DataCleaner = require('../utils/DataCleaner');
 const SchemaDetector = require('../utils/SchemaDetector');
 const DataTypeConverter = require('../utils/DataTypeConverter');
 const DataValidator = require('../utils/DataValidater');
-const { generateInsights } = require("../utils/InsightGenerator");
+const  generateInsights  = require("../utils/InsightGenerator");
 
 const storage = multer.diskStorage({
   destination: "uploads/",
@@ -66,7 +66,8 @@ function processData(data, res) {
   });
   const cleanedData = DataCleaner(convertedData, schema);
   const validation = DataValidator(cleanedData, schema);
-  const insights = generateInsights(cleanedData,schema)
+  const groupedSchema = groupSchema(schema);
+  const insights = generateInsights(cleanedData, groupedSchema);
 
   res.json({
     success: true,
@@ -76,5 +77,26 @@ function processData(data, res) {
     insights:insights
   });
 }
+
+function groupSchema(schema) {
+  const grouped = {
+    numeric: [],
+    categorical: [],
+    date: []
+  };
+
+  for (let key in schema) {
+    if (schema[key] === "number" || schema[key] === "percentage") {
+      grouped.numeric.push(key);
+    } else if (schema[key] === "date") {
+      grouped.date.push(key);
+    } else {
+      grouped.categorical.push(key);
+    }
+  }
+
+  return grouped;
+}
+
 
 module.exports = router;

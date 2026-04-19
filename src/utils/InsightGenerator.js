@@ -65,7 +65,7 @@ function getTrendInsights(data, dateCol, valueCol) {
   }
 }
 
-export function generateInsights(data, schema) {
+function generateInsights(data, schema) {
   let insights = [];
 
   // Numeric
