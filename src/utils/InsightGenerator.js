@@ -87,3 +87,5 @@ function generateInsights(data, schema) {
 
   return insights;
 }
+
+module.exports = generateInsights;
