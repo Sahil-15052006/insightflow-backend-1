@@ -46,18 +46,28 @@ function DataTypeConverter(row, schema) {
 
         // date
         else if (type === "date") {
-            const date = new Date(value);
+            let date = new Date(value);
+
+            // Handle dd/mm/yyyy manually (JS misreads this)
+            if (typeof value === "string" && value.includes("/")) {
+                const parts = value.split("/");
+
+                if (parts[0].length === 2) {
+                // dd/mm/yyyy → convert
+                date = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+                }
+            }
 
             if (!isNaN(date.getTime())) {
-                const year = date.getFullYear();
-                const month = String(date.getMonth() + 1).padStart(2, "0");
-                const day = String(date.getDate()).padStart(2, "0");
+                const y = date.getFullYear();
+                const m = String(date.getMonth() + 1).padStart(2, "0");
+                const d = String(date.getDate()).padStart(2, "0");
 
-                newRow[key] = `${year}/${month}/${day}`; // ✅ yyyy/mm/dd
+                newRow[key] = `${y}-${m}-${d}`; // ✅ standard format
             } else {
                 newRow[key] = null;
             }
-            }
+        }
 
         // ✅ email
         else if (type === "email") {
