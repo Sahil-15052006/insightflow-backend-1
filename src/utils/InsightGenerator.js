@@ -77,9 +77,11 @@ function generateInsights(data, schema) {
   });
 
   // ✅ Day insights (optional but powerful)
-  if (schema.date.length) {
-    insights.push(...getDayInsights(data, schema.date[0]));
-  }
+  schema.date.forEach(col=>{
+    if (schema.date.length) {
+      insights.push(...getDayInsights(data, col));
+    }
+  })
 
 
   return insights;
