@@ -44,10 +44,15 @@ function DataTypeConverter(row, schema) {
             }
         }
 
-        // ✅ date (keep consistent as string)
+        // date
         else if (type === "date") {
-            const isValidFormat = /^\d{4}-\d{2}-\d{2}$/.test(value)
-            newRow[key] = isValidFormat ? value : null
+        const isValidFormat = /^\d{4}-\d{2}-\d{2}$/.test(value);
+
+        if (isValidFormat) {
+            newRow[key] = value.replace(/-/g, "/"); // ✅ convert to yyyy/mm/dd
+        } else {
+            newRow[key] = null;
+        }
         }
 
         // ✅ email
