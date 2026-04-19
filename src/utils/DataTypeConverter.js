@@ -46,14 +46,18 @@ function DataTypeConverter(row, schema) {
 
         // date
         else if (type === "date") {
-        const isValidFormat = /^\d{4}-\d{2}-\d{2}$/.test(value);
+            const date = new Date(value);
 
-        if (isValidFormat) {
-            newRow[key] = value.replace(/-/g, "/"); // ✅ convert to yyyy/mm/dd
-        } else {
-            newRow[key] = null;
-        }
-        }
+            if (!isNaN(date.getTime())) {
+                const year = date.getFullYear();
+                const month = String(date.getMonth() + 1).padStart(2, "0");
+                const day = String(date.getDate()).padStart(2, "0");
+
+                newRow[key] = `${year}/${month}/${day}`; // ✅ yyyy/mm/dd
+            } else {
+                newRow[key] = null;
+            }
+            }
 
         // ✅ email
         else if (type === "email") {
