@@ -29,21 +29,40 @@ function DataValidator(data, schema) {
     // 3. column null check
     for (let key in schema) {
 
-        let nullCount = 0;
+    let value = row[key];
+    let type = schema[key];
 
-        for (let i = 0; i < data.length; i++) {
-            let value = data[i][key];
+    if (value === null || value === undefined) continue;
 
-            if (value === null || value === undefined) {
-                nullCount++;
-            }
+    value = String(value).trim();
+
+    // number
+    if (type === "number" && !/^-?\d+(\.\d+)?$/.test(value)) {
+        warnings.push(`Invalid number in column ${key} at row ${i}`);
+    }
+
+    // percentage
+    else if (type === "percentage" && !/^\d+(\.\d+)?%$/.test(value)) {
+        warnings.push(`Invalid percentage in column ${key} at row ${i}`);
+    }
+
+    // boolean
+    else if (type === "boolean") {
+        const val = value.toLowerCase();
+        if (!(val === "true" || val === "false")) {
+            warnings.push(`Invalid boolean in column ${key} at row ${i}`);
         }
+    }
 
-        let ratio = nullCount / data.length;
+    // email
+    else if (type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        warnings.push(`Invalid email in column ${key} at row ${i}`);
+    }
 
-        if (ratio > 0.5) {
-            warnings.push("Column " + key + " has too many null values");
-        }
+    // date (strict)
+    else if (type === "date" && !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+        warnings.push(`Invalid date in column ${key} at row ${i}`);
+    }
     }
 
     // 4. row null check

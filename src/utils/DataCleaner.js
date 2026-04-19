@@ -2,7 +2,6 @@ function DataCleaner(data, schema) {
 
     const columnStats = {};
 
-    // -------- STEP 1: calculate stats --------
     for (let key in schema) {
 
         const type = schema[key];
@@ -30,6 +29,18 @@ function DataCleaner(data, schema) {
 
             else if (type === "email") {
                 if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                    values.push(value);
+                }
+            }
+
+            else if (type === "percentage") {
+                if (/^\d+(\.\d+)?%$/.test(value)) {
+                    values.push(Number(value.replace("%", "")));
+                }
+            }
+
+            else if (type === "date") {
+                if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
                     values.push(value);
                 }
             }
@@ -121,6 +132,24 @@ function DataCleaner(data, schema) {
                     newRow[key] = value;
                 } else {
                     newRow[key] = null;
+                }
+            }
+
+            else if (type === "percentage") {
+
+                if (value && /^\d+(\.\d+)?%$/.test(value)) {
+                    newRow[key] = Number(value.replace("%", "")) / 100;
+                } else {
+                    newRow[key] = columnStats[key] !== null ? columnStats[key] / 100 : null;
+                }
+            }
+
+            else if (type === "date") {
+
+                if (value && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
+                    newRow[key] = value;
+                } else {
+                    newRow[key] = columnStats[key];
                 }
             }
 

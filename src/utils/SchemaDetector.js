@@ -21,6 +21,7 @@ function SchemaDetector(data) {
         let emailCount = 0
         let dateCount = 0
         let totalValid = 0
+        let percentageCount = 0
 
         for (let j = 0; j < sampleData.length; j++) {
 
@@ -46,6 +47,10 @@ function SchemaDetector(data) {
                 numberCount++
             }
 
+            else if (/^\d+(\.\d+)?%$/.test(value)) {
+                percentageCount++
+            }
+
             else if (!isNaN(Date.parse(value))) {
                 dateCount++
             }
@@ -68,6 +73,10 @@ function SchemaDetector(data) {
 
         else if (emailCount / totalValid > 0.5) {
             detectedType = "email"
+        }
+
+        if (percentageCount / totalValid > 0.5) {
+            detectedType = "percentage"
         }
 
         else if (dateCount / totalValid > 0.5) {

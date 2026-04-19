@@ -12,12 +12,16 @@ function DataTypeConverter(row, schema) {
         }
 
         value = String(value).trim()
-
         const type = schema[key]
 
-        if (type === "number") {
-            const num = Number(value)
-            newRow[key] = isNaN(num) ? null : num
+        if (type === "percentage") {
+            const num = Number(value.replace("%", ""))
+            newRow[key] = isNaN(num) ? null : num / 100
+        }
+
+        else if (type === "number") {
+            const isValidNumber = /^-?\d+(\.\d+)?$/.test(value)
+            newRow[key] = isValidNumber ? Number(value) : null
         }
 
         else if (type === "boolean") {
@@ -28,8 +32,13 @@ function DataTypeConverter(row, schema) {
         }
 
         else if (type === "date") {
-            const date = new Date(value)
-            newRow[key] = isNaN(date.getTime()) ? null : date
+            const isValidFormat = /^\d{4}-\d{2}-\d{2}$/.test(value)
+            if (!isValidFormat) {
+                newRow[key] = null
+            } else {
+                const date = new Date(value)
+                newRow[key] = isNaN(date.getTime()) ? null : date
+            }
         }
 
         else if (type === "email") {
@@ -44,5 +53,3 @@ function DataTypeConverter(row, schema) {
 
     return newRow
 }
-
-module.exports = DataTypeConverter;
