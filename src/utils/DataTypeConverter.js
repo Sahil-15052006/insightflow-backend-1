@@ -17,8 +17,7 @@ function DataTypeConverter(row, schema) {
         // ✅ percentage (strict)
         if (type === "percentage") {
             if (/^\d+(\.\d+)?%$/.test(value)) {
-                const num = Number(value.replace("%", ""))
-                newRow[key] = num / 100
+                newRow[key] = Number(value.replace("%", ""))
             } else {
                 newRow[key] = null
             }
