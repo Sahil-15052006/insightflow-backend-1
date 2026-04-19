@@ -9,6 +9,7 @@ const DataCleaner = require('../utils/DataCleaner');
 const SchemaDetector = require('../utils/SchemaDetector');
 const DataTypeConverter = require('../utils/DataTypeConverter');
 const DataValidator = require('../utils/DataValidater');
+const { generateInsights } = require("../utils/InsightGenerator");
 
 const storage = multer.diskStorage({
   destination: "uploads/",
@@ -63,15 +64,16 @@ function processData(data, res) {
   const convertedData = data.map((row) => {
     return DataTypeConverter(row, schema);
   });
-
   const cleanedData = DataCleaner(convertedData, schema);
   const validation = DataValidator(cleanedData, schema);
+  const insights = generateInsights(cleanedData,schema)
 
   res.json({
     success: true,
     schema: schema,
     data: cleanedData,
-    validation: validation
+    validation: validation,
+    insights:insights
   });
 }
 
