@@ -7,6 +7,7 @@ const authMiddleware = require('./middleware/authMiddleware')
 const uploadRoutes = require('./routes/uploadRoutes')
 const analyzeRoutes = require('./routes/analyzeRoutes')
 const User = require('./models/userModel')
+const datasetRoutes = require("./routes/datasetRoutes");
 
 const app=express()
 
@@ -20,6 +21,11 @@ app.use(cors({
 app.use('/auth',authRoutes)
 app.use('/uploadFile',uploadRoutes)
 app.use('/analyzeData',analyzeRoutes)
+app.use("/api/datasets", datasetRoutes);
+
+if (dataset.userId.toString() !== req.user.id) {
+  return res.status(403).json({ message: "Unauthorized" });
+}
 
 app.get('/userInfo',authMiddleware,async(req,res)=>{
   try{
