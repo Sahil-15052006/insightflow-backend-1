@@ -38,7 +38,6 @@ const DatasetSchema = new mongoose.Schema({
   },
 });
 
-// ⚡ speed optimization
 DatasetSchema.index({ userId: 1 });
 
 module.exports = mongoose.model("Dataset", DatasetSchema);
