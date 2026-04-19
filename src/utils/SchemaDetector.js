@@ -56,13 +56,14 @@ function SchemaDetector(data) {
             }
 
             // ✅ strict date only
-            else if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
-                dateCount++
-            }
-
             else {
-                stringCount++
+                const date = new Date(value);
+                if (!isNaN(date.getTime())) {
+                    dateCount++;
+            } else {
+                    stringCount++;
             }
+}
         }
 
         let detectedType = "string"
