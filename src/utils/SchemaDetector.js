@@ -20,8 +20,8 @@ function SchemaDetector(data) {
         let booleanCount = 0
         let emailCount = 0
         let dateCount = 0
-        let totalValid = 0
         let percentageCount = 0
+        let totalValid = 0
 
         for (let j = 0; j < sampleData.length; j++) {
 
@@ -35,23 +35,28 @@ function SchemaDetector(data) {
 
             value = String(value).trim().toLowerCase()
 
+            // ✅ boolean
             if (value === "true" || value === "false") {
                 booleanCount++
             }
 
+            // ✅ email
             else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
                 emailCount++
             }
 
-            else if (!isNaN(value)) {
-                numberCount++
-            }
-
+            // ✅ percentage (check BEFORE number)
             else if (/^\d+(\.\d+)?%$/.test(value)) {
                 percentageCount++
             }
 
-            else if (!isNaN(Date.parse(value))) {
+            // ✅ strict number
+            else if (/^-?\d+(\.\d+)?$/.test(value)) {
+                numberCount++
+            }
+
+            // ✅ strict date only
+            else if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
                 dateCount++
             }
 
@@ -62,23 +67,25 @@ function SchemaDetector(data) {
 
         let detectedType = "string"
 
-        // use threshold logic instead of max
-        if (numberCount / totalValid > 0.3) {
-            detectedType = "number"
+        // ✅ avoid divide by zero
+        if (totalValid === 0) {
+            dataSchema[columnName] = "string"
+            continue
         }
 
-        else if (booleanCount / totalValid > 0.8) {
-            detectedType = "boolean"
-        }
-
-        else if (emailCount / totalValid > 0.5) {
-            detectedType = "email"
-        }
-
+        // ✅ proper priority
         if (percentageCount / totalValid > 0.5) {
             detectedType = "percentage"
         }
-
+        else if (numberCount / totalValid > 0.3) {
+            detectedType = "number"
+        }
+        else if (booleanCount / totalValid > 0.8) {
+            detectedType = "boolean"
+        }
+        else if (emailCount / totalValid > 0.5) {
+            detectedType = "email"
+        }
         else if (dateCount / totalValid > 0.5) {
             detectedType = "date"
         }

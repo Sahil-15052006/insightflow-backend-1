@@ -6,11 +6,12 @@ function DataValidator(data, schema) {
     // 1. check empty data
     if (!data || data.length === 0) {
         errors.push("Data is empty");
+        return { valid: false, errors, warnings };
     }
 
-    // 2. check required fields (you can change this list)
     const requiredFields = Object.keys(schema);
 
+    // 2. row-level checks (missing fields + type validation)
     for (let i = 0; i < data.length; i++) {
 
         let row = data[i];
@@ -24,45 +25,65 @@ function DataValidator(data, schema) {
                 errors.push("Missing field: " + key + " in row " + i);
             }
         }
+
+        // ✅ type validation (FIXED: now inside loop)
+        for (let key in schema) {
+
+            let value = row[key];
+            let type = schema[key];
+
+            if (value === null || value === undefined) continue;
+
+            value = String(value).trim();
+
+            // number
+            if (type === "number" && !/^-?\d+(\.\d+)?$/.test(value)) {
+                warnings.push(`Invalid number in column ${key} at row ${i}`);
+            }
+
+            // percentage
+            else if (type === "percentage" && !/^\d+(\.\d+)?%$/.test(value)) {
+                warnings.push(`Invalid percentage in column ${key} at row ${i}`);
+            }
+
+            // boolean
+            else if (type === "boolean") {
+                const val = value.toLowerCase();
+                if (!(val === "true" || val === "false")) {
+                    warnings.push(`Invalid boolean in column ${key} at row ${i}`);
+                }
+            }
+
+            // email
+            else if (type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                warnings.push(`Invalid email in column ${key} at row ${i}`);
+            }
+
+            // date (strict)
+            else if (type === "date" && !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+                warnings.push(`Invalid date in column ${key} at row ${i}`);
+            }
+        }
     }
 
     // 3. column null check
     for (let key in schema) {
 
-    let value = row[key];
-    let type = schema[key];
+        let nullCount = 0;
 
-    if (value === null || value === undefined) continue;
+        for (let i = 0; i < data.length; i++) {
+            let value = data[i][key];
 
-    value = String(value).trim();
-
-    // number
-    if (type === "number" && !/^-?\d+(\.\d+)?$/.test(value)) {
-        warnings.push(`Invalid number in column ${key} at row ${i}`);
-    }
-
-    // percentage
-    else if (type === "percentage" && !/^\d+(\.\d+)?%$/.test(value)) {
-        warnings.push(`Invalid percentage in column ${key} at row ${i}`);
-    }
-
-    // boolean
-    else if (type === "boolean") {
-        const val = value.toLowerCase();
-        if (!(val === "true" || val === "false")) {
-            warnings.push(`Invalid boolean in column ${key} at row ${i}`);
+            if (value === null || value === undefined) {
+                nullCount++;
+            }
         }
-    }
 
-    // email
-    else if (type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-        warnings.push(`Invalid email in column ${key} at row ${i}`);
-    }
+        let ratio = nullCount / data.length;
 
-    // date (strict)
-    else if (type === "date" && !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
-        warnings.push(`Invalid date in column ${key} at row ${i}`);
-    }
+        if (ratio > 0.5) {
+            warnings.push("Column " + key + " has too many null values");
+        }
     }
 
     // 4. row null check
@@ -86,12 +107,18 @@ function DataValidator(data, schema) {
         }
     }
 
-    // 5. duplicate check
+    // 5. duplicate check (normalized)
     let seen = new Set();
 
     for (let i = 0; i < data.length; i++) {
 
-        let rowString = JSON.stringify(data[i]);
+        let normalizedRow = {};
+
+        for (let key in schema) {
+            normalizedRow[key] = data[i][key] ?? null;
+        }
+
+        let rowString = JSON.stringify(normalizedRow);
 
         if (seen.has(rowString)) {
             warnings.push("Duplicate row found at index " + i);
@@ -100,7 +127,6 @@ function DataValidator(data, schema) {
         }
     }
 
-    // final result
     return {
         valid: errors.length === 0,
         errors: errors,

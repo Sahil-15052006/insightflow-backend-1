@@ -2,6 +2,7 @@ function DataCleaner(data, schema) {
 
     const columnStats = {};
 
+    // -------- STEP 1: calculate stats --------
     for (let key in schema) {
 
         const type = schema[key];
@@ -11,34 +12,37 @@ function DataCleaner(data, schema) {
 
             let value = data[i][key];
 
-            if (value === null || value === undefined || value === "") {
-                continue;
-            }
+            if (value === null || value === undefined || value === "") continue;
 
+            // ✅ number (strict)
             if (type === "number") {
-                if (!isNaN(value)) {
-                    values.push(Number(value));
-                }
-            }
-
-            else if (type === "boolean") {
-                if (value === true || value === false || value === "true" || value === "false") {
+                if (typeof value === "number") {
                     values.push(value);
                 }
             }
 
+            // ✅ percentage (already decimal)
+            else if (type === "percentage") {
+                if (typeof value === "number") {
+                    values.push(value);
+                }
+            }
+
+            // ✅ boolean normalize
+            else if (type === "boolean") {
+                if (value === true || value === false) {
+                    values.push(value);
+                }
+            }
+
+            // ✅ email
             else if (type === "email") {
                 if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
                     values.push(value);
                 }
             }
 
-            else if (type === "percentage") {
-                if (/^\d+(\.\d+)?%$/.test(value)) {
-                    values.push(Number(value.replace("%", "")));
-                }
-            }
-
+            // ✅ date
             else if (type === "date") {
                 if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
                     values.push(value);
@@ -55,30 +59,27 @@ function DataCleaner(data, schema) {
             continue;
         }
 
-        if (type === "number") {
+        // -------- numeric median --------
+        if (type === "number" || type === "percentage") {
 
-            values.sort(function(a, b) {
-                return a - b;
-            });
+            values.sort((a, b) => a - b);
 
             let mid = Math.floor(values.length / 2);
 
-            if (values.length % 2 === 0) {
-                columnStats[key] = (values[mid - 1] + values[mid]) / 2;
-            } else {
-                columnStats[key] = values[mid];
-            }
+            columnStats[key] =
+                values.length % 2 === 0
+                    ? (values[mid - 1] + values[mid]) / 2
+                    : values[mid];
         }
 
-        else if (type === "string" || type === "boolean") {
+        // -------- mode --------
+        else {
 
             let freq = {};
             let max = 0;
             let mode = null;
 
-            for (let i = 0; i < values.length; i++) {
-
-                let val = values[i];
+            for (let val of values) {
 
                 freq[val] = (freq[val] || 0) + 1;
 
@@ -104,28 +105,37 @@ function DataCleaner(data, schema) {
             let value = data[i][key];
             let type = schema[key];
 
+            // ✅ number
             if (type === "number") {
 
-                if (value === null || value === "" || isNaN(value)) {
+                if (typeof value !== "number") {
                     newRow[key] = columnStats[key];
                 } else {
-                    newRow[key] = Number(value);
+                    newRow[key] = value;
                 }
             }
 
+            // ✅ percentage (already decimal)
+            else if (type === "percentage") {
+
+                if (typeof value !== "number") {
+                    newRow[key] = columnStats[key];
+                } else {
+                    newRow[key] = value;
+                }
+            }
+
+            // ✅ boolean
             else if (type === "boolean") {
 
                 if (value === true || value === false) {
                     newRow[key] = value;
-                } else if (value === "true") {
-                    newRow[key] = true;
-                } else if (value === "false") {
-                    newRow[key] = false;
                 } else {
                     newRow[key] = columnStats[key];
                 }
             }
 
+            // ✅ email
             else if (type === "email") {
 
                 if (value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
@@ -135,15 +145,7 @@ function DataCleaner(data, schema) {
                 }
             }
 
-            else if (type === "percentage") {
-
-                if (value && /^\d+(\.\d+)?%$/.test(value)) {
-                    newRow[key] = Number(value.replace("%", "")) / 100;
-                } else {
-                    newRow[key] = columnStats[key] !== null ? columnStats[key] / 100 : null;
-                }
-            }
-
+            // ✅ date
             else if (type === "date") {
 
                 if (value && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
@@ -153,6 +155,7 @@ function DataCleaner(data, schema) {
                 }
             }
 
+            // ✅ string
             else {
 
                 if (value === null || value === "") {
