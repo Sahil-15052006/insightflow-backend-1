@@ -25,10 +25,6 @@ app.use('/uploadFile',uploadRoutes)
 app.use('/analyzeData',analyzeRoutes)
 app.use("/api/datasets", datasetRoutes);
 
-if (dataset.userId.toString() !== req.user.id) {
-  return res.status(403).json({ message: "Unauthorized" });
-}
-
 app.get('/userInfo',authMiddleware,async(req,res)=>{
   try{
     const user = await User.findById(req.user.id).select("-password")
