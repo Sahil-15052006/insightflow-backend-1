@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Dataset = require("../models/Dataset");
+const Dataset = require("../models/Datasets");
 const auth = require("../middleware/auth");
 
 
